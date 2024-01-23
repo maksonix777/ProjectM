@@ -1,0 +1,28 @@
+.notFoundPageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px ;
+    flex-direction: column;
+}
+.goHome_btn{
+    
+        width: 209px;
+        height: 58px;
+        padding: 16px 56px;
+        margin-top: 32px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+       
+        font-weight: 600;
+        text-decoration: none;
+        background-color: rgba(51, 153, 51, 1);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-bottom: 80px;
+        
+    
+    
+}
