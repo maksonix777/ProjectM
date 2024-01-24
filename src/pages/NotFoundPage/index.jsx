@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../../components/Footer'
 import notFoundPage from '../../ui/notfoundpage.jpg'
 import s from "./NotFoundPage.module.css" 
 import { Link } from 'react-router-dom'
