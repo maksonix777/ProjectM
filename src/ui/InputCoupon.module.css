@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.discount_form {
+    margin-top: 56px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid red;
+}
+input {
+    width: 516px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.discountInput {
+    font-size: 20px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.discountInput::placeholder {
+    color: white;
+    text-indent: 30px;
+}
+.couponBtn {
+    margin-top: 16px;
+    width: 100%;
+
+    height: 58px;
+    background-color: #fff;
+    border: 0px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    color: white;
+    background-color: #000000;
+}

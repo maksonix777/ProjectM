@@ -1,17 +1,18 @@
 import React from 'react'
-import notFoundPage from '../../ui/notfoundpage.jpg'
+import notFoundPage from '../../media/notfoundpage.jpg'
 import s from "./NotFoundPage.module.css" 
 import { Link } from 'react-router-dom'
+import ButtonCard from '../../ui/Buttons/ButtonCard'
 
-export default function NorFoundPage() {
+export default function NotFoundPage() {
+  
   return (
-    
-    <div className={s.notFoundPageContainer}>NotFoundPage
+  <div className={s.notFoundPageContainer}>NotFoundPage
       <img className={s.notFoundPage} src={notFoundPage} alt="PageNotFoundImage"/>
-      <Link to="/MainPage" > <button className={s.goHome_btn}>Go home</button></Link>
-     
-    
-    </div>
+      <Link to="/" > 
+          <ButtonCard title='Go Home'widthBtn="209"/> 
+      </Link>
+      </div>
   
 
   )

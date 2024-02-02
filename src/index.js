@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { store } from './store'
 
+export const ROOT_URL = 'http://localhost:3333'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

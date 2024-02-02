@@ -1,31 +1,54 @@
-import React from 'react'
+import React, { useRef } from "react";
 import s from "./MainPage.module.css";
-import checkOut from "../../ui/checkOut.jpg"
+import checkOut from "../../media/checkOut.jpg";
+import Coupon from "../../components/Coupon";
+import ButtonCard from "../../ui/Buttons/ButtonCard";
+import CategoriesContainer from "../../components/CategoriesContainer";
+import Sale from "../../components/Sale";
+import LinkButtonContainer from "../../components/LinkButtonContainer";
+import LinkButton from "../../ui/Buttons/LinkButton";
+
 
 export default function MainPage() {
-  return (
-    <div>
-        <div className={s.banner}> <img src={checkOut} alt="checkOut" /></div>
 
-        <div className='wrapper'> 
-            <p className={s.bannerText}> Amazing Discounts on Garden Products!</p>
-            <button className={s.checkout_btn}> Check out</button>
-        </div>
 
-        <div className={s.categoriesContainer}>
-        <p className={s.categories}>Categories</p>
-        <div className={s.cardAll}>
-            <div class={s.card}>
-               <p class="cardTxt">Fertilizer</p>
+const saleRef = useRef();
+const handleClick = () => {
+    saleRef.current?.scrollIntoView({ behavior: "smooth" });
+};
+
+
+return (
+    <div className="wrapper">
+    <div className={s.banner}> 
+        <div>
+       
+            <div className={s.bannerTxt}> 
+                <p className={s.bannerText}>Amazing Discounts on Garden Products!</p>
+                <ButtonCard onClick={handleClick} title="Check out" widthBtn="218"/>
             </div>
-            <div class="card">
-                <p class="cardTxt">Protective products and septic tanks</p>
             </div>
-        </div>
-    </div>
         </div>
         
-     
+    <div className={s.buttonGreyContainer}>    
+        <LinkButtonContainer title='Categories'/> 
+        <LinkButton buttonText='All Categories'link="categories/all"/>
+    </div>
+        <div className={s.categoriesAllContainer}>
+        <CategoriesContainer type="notAllCategories" />
+        </div>
+
+        <Coupon />
+
+            <div className={s.buttonGreyContainer}ref={saleRef}> 
+        <LinkButtonContainer title='Sale' />
+        <LinkButton buttonText='All Sales'/>
+            <div className={s.buttonGrey}>
+            <Sale  />
+            </div>
+        </div>
+        
+    </div>
     
-   )
+);
 }

@@ -1,31 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './Header.module.css';  
-import logo from '../../ui/logo.png'
-import basket from '../../ui/basket.png'
+import logo from '../../media/logo.png'
+import basket from '../../media/basket.png'
+import Basket from '../Basket';
 
 
 export default function Header() {
   return (
-    <div className="wrapper"> 
-      <header>
-       <div> <img src={logo} alt= "img" /> </div>
+    <div > 
+        <div className={s.line}></div>
+        <header className="wrapper">
+        <div> <img src={logo} alt= "img" /> </div>
         <div className={s.navbar}>
-            <Link to={'/MainPage'}> Main Page </Link>
-            <Link to={'/Categories'}> Categories </Link>
-            <Link to={'/allProducts'}> All products </Link>
-            <Link to={'/allSales'}> Products </Link>
+            <Link to={'/'}> Main Page </Link>
+            <Link to={'/categories/all'}> Categories </Link>
+            <Link to={'/products/all'}> All products </Link>
+            <Link to={'/allSales'}> All sales </Link>
             {/* <a href="#mainPage">Main Page</a>
             <a href="#categories">Categories</a>
             <a href="#allProducts">All products</a>
             <a href="#allSales">All sales</a> */}
         </div>
-        <div className={s.basketItem}>
-            <a href="#basket" class="basket-link">
+        <Basket/>
+        {/* <div className={s.basketItem}>
+             
                 <img src={basket} alt="Basket"/>
-            </a>
-        </div>
-        <div className={s.line}></div>
+            
+        </div> */}
+       
     </header>
     </div>
 

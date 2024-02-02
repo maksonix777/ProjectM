@@ -1,69 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-.banner{
-    top:128px;
-    width: 100vw;
-    position: absolute;
+
+.categoriesAllContainer img {
+    width: 316px;
+    height: 360px;
+
 }
+
+.banner {
+    background-image: url(../../media/checkOut.jpg);
+    width: 1440px;
+    height: 600px;
+    background-size: cover;
+}
+
 .bannerText {
-    width: 1100px;
     margin-top: 80px;
-    position: relative;
+    margin-left: 40px;
+   
     line-height: 110%;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    
     color: rgb(255, 255, 255);
     font-size: 96px;
     font-weight: 700;
-    }
-.checkout_btn{
-    top: 0;
-    position: relative;
-    width: 218px;
-    height: 58px;
-    padding: 10px 20px;
-    margin-top: 40px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-decoration: none;
-    background-color: rgba(51, 153, 51, 1);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.checkout_btn:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
-.categoriesContainer {
-    margin-top: 392px;
-    margin-left: 40px;
-}
-
-.categories {
-    color: rgb(0, 0, 0);
-    font-size: 64px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
 
 }
-
-.card {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    margin-top: 40px;
-    width: 316px;
-    height: 350px;
-}
-
-.cardAll {
+.buttonGreyContainer{
+    margin-bottom: 40px;
+    margin-top: 80px;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    max-width: 1400px;
 }
-.cardTxt{
-    font-size: 20px;
+.bannerTxt{
+    padding-top: 20px; 
+    background-clip: content-box;
 }
-

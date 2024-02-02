@@ -3,6 +3,9 @@ import ProductsContainer from '../../components/ProductsContainer'
 
 export default function ProductsPage() {
   return (
-    <div><ProductsContainer/></div>
+    <div>
+      <ProductsContainer/>
+    </div>
   )
 }
+

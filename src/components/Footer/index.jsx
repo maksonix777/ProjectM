@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Footer.module.css";
-import instagram from "../../ui/instagram.png";
-import whatsapp from "../../ui/whatsapp.png";
+import instagram from "../../media/instagram.png";
+import whatsapp from "../../media/whatsapp.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {

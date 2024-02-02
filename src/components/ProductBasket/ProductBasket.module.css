@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+.productTxtAll{
+    padding: 32px;
+  
+    display: flex;
+    flex-direction: column;
+}
+.productsImg{
+    height: 284px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid rgb(221,221,221);
+    overflow: hidden;
+}
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 32px;
+   
+    }
+
+.productTitle{
+    
+    /* margin:20px 32px 16px; */
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    }
+/* .productTitle:hover{
+max-width: none;
+overflow:visible;
+text-overflow:clip;
+background-color: rgb(134, 14, 14);
+} */
+   
+.productsAllTitle{
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.ProductCard{
+    object-fit: cover;
+   display: flex;
+    
+    
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgb(221,221,221);
+    
+}
+.productPrices{
+    /* margin: 0 20px 20px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px; */
+    display: flex;
+    gap: 32px;
+    
+
+}
+.discount_price{
+    
+    font-size: 20px;
+    text-decoration: line-through;
+    color: rgba(139, 139, 139, 1);
+}
+.productPrice{
+    color:  #282828;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+/* ProductsPage.module.css */
+
+.ProductCard {
+ position: relative;
+ }
+
+.imgContainer{
+   height: 180px;
+   width: 200px;
+}
+.controlAll{
+   
+    display: flex;
+   gap: 32px;
+   
+   
+   
+}
+
+/*-----------*/
+.controllAll{
+    display: flex;
+    gap: 32px;
+}
+.control button,
+.control p {
+  outline: 1px solid #ddd; /* Замените цвет и толщину на необходимые значения */
+  margin: 0; /* Обнулить отступы, чтобы обводка была ближе к содержимому */
+}
+
+.control > p {
+    width: 96px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.control {
+    margin-top: 32px;
+    display: flex;
+}
+
+.cardPriceContainer{
+    display: flex;
+    align-items: end;
+}
+.control button{
+    width: 58px;
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.closeBtn{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    cursor: pointer;
+}
+.allPrice{
+    display: flex;
+   align-items: end;
+}
