@@ -7,7 +7,7 @@ import s from './ProductsContainer.module.css';
 import ButtonCard from "../../ui/Buttons/ButtonCard";
 import FilterProducts from "../FilterProducts";
 import { addItemAction } from "../../store/reducers/basketReducer";
-
+/* add */
 function ProductsContainer({ type }) {
   const { id } = useParams();
   const { category_title, products } = useSelector((store) => store.products);

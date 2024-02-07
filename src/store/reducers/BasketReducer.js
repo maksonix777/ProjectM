@@ -3,7 +3,7 @@ const defaultState = {
     sumTotal: 0,
     countItems: 0
 }
-
+/* add*/
 const ADD_ITEM = 'ADD_ITEM' 
 
 export const basketReducer = (state = defaultState, action) => {

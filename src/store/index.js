@@ -6,7 +6,7 @@ import SingleProduct from '../components/SingleProduct';
 import { basketReducer } from './reducers/basketReducer';
 
 
-
+/* add */
 
 const rootReducer = combineReducers({
   products: productsReducer,

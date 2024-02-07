@@ -25,7 +25,7 @@ import { addItemAction } from "../../store/reducers/basketReducer";
         <button>-</button>
         <span>{elem.count}</span>
         <button onClick={handleIncrement}>+</button>
-        <p>Total Cost: </p>
+        <p>Total Cost: 10000</p>
         </div>);
 }
 

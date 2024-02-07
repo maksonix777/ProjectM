@@ -19,7 +19,7 @@ export default function CategoryProductsPage() {
 
   console.log(products)
 
-
+/* add */
   return (
 
     <div>
