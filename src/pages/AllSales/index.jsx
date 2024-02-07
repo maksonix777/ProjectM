@@ -53,7 +53,7 @@ const saleProducts = products.filter(elem => elem.discont_price);
     return (
     <div className="wrapper">
         
-        <h2 className={s.productsAllTitle}>All Sales</h2>
+        <h2 className={s.productsAllTitle}>{category_title}</h2>
         <Sale type='allSales'/>
     </div>
     );

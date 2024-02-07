@@ -13,12 +13,12 @@ export const productsReducer = (state = defaultState, action) => {
 
   switch (action.type) {
       case ALL_PRODUCTS:
-        return { products: action.payload };
+        return { products: action.payload, category_title: "All Products" };
 
 
       case ALL_SALE_PRODUCTS:
         let sales_products = action.payload.filter((elem) => elem.discont_price);
-        return { products: sales_products };
+        return { products: sales_products, category_title: "Discounted Items"  };
 
       case NOT_ALL_SALES:
         let not_all_sales_products = action.payload

@@ -7,26 +7,44 @@ import s from './ProductsContainer.module.css';
 import ButtonCard from "../../ui/Buttons/ButtonCard";
 import FilterProducts from "../FilterProducts";
 import { addItemAction } from "../../store/reducers/basketReducer";
+import { allProductsAction, allSalesProductsAction } from "../../store/reducers/ProductsReducer";
+import categoryProduct from "../../asyncActions/categoryProduct";
 /* add */
 function ProductsContainer({ type }) {
   const { id } = useParams();
   const { category_title, products } = useSelector((store) => store.products);
   const { basket } = useSelector((store) => store.basket);
 
-  const dispatch = useDispatch(); 
-
-  useEffect(() => {
+  const dispatch = useDispatch();
+  // if (type == "categoryProduct"){
+  //   const {id} = useParams();
+  // } 
+  console.log(products)
+  useEffect(( ) => {
     if (type !== "category") {
       dispatch(fetchAllProducts(type));
+    }
+    if(type == "allSales"){
+      console.log('a!! ll  sale !!');
+      dispatch(fetchAllProducts(type));
+    }
+    if(type == "allProducts"){
+      console.log(' all products  !!');
+      dispatch(fetchAllProducts(type));
+    }
+    if(type == "categoryProducts"){
+
+      console.log(' Category products !!');
+        dispatch(categoryProduct(id));
     }
   }, [id, type]);
 
 
-  let currentPrice = 0; {/* posle skidki */}
+  let currentPrice = 0; {/* posle skidki */ }
   let price = 0;
 
 
-  function priceHandle(elem){
+  function priceHandle(elem) {
     if (elem.discont_price) {
       currentPrice = '$' + elem.discont_price
       price = '$' + elem.price
@@ -36,14 +54,14 @@ function ProductsContainer({ type }) {
       price = ""
     }
     return currentPrice
-  } 
-  
+  }
+
 
 
   function saleHandle(elem) {
-    let sale = 0 
+    let sale = 0
 
-    if (elem.discont_price){
+    if (elem.discont_price) {
       sale = '-' + Math.round(100 - (elem.discont_price * 100 / elem.price)) + '%'
 
     }
@@ -54,47 +72,48 @@ function ProductsContainer({ type }) {
   }
 
 
-  function AddToCartHandle(obj){
-    
-    dispatch(addItemAction({...obj, count: 1}))
-console.log(obj)
+  function AddToCartHandle(obj) {
+
+    dispatch(addItemAction({ ...obj, count: 1 }))
+    console.log(obj)
   }
+console.log(type + '1213242326525')
 
-return (
-  <div className="wrapper">
- 
-    <h2 className={s.productsAllTitle}>All products</h2>
-    <FilterProducts/>
-    <div className={s.productsContainer}>
-      {products.map((elem) => (
-        <div className={s.ProductCard} key={elem.id}>
-          {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}
+  return (
+    <div className="wrapper">
 
-          <div className={s.imgBtnContainer}> 
+      <h2 className={s.productsAllTitle}>{category_title}</h2>
+      <FilterProducts />
+      <div className={s.productsContainer}>
+        {products?.map((elem) => (
+          <div className={s.ProductCard} key={elem.id}>
+            {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}
+
+            <div className={s.imgBtnContainer}>
               <img className={s.productsImg} src={ROOT_URL + elem.image} />
 
-              <div className={s.btn}> 
-              <ButtonCard onClick={()=> AddToCartHandle( elem)} title="Add to card" widthBtn="284"/>
+              <div className={s.btn}>
+                <ButtonCard onClick={() => AddToCartHandle(elem)} title="Add to card" widthBtn="284" />
               </div>
-          </div>
+            </div>
 
-          <abbr title={elem.title}> 
-          
-          <p className={s.productTitle}>{elem.title}</p>
-          
-           </abbr>
+            <abbr title={elem.title}>
 
-          <div className={s.productPrices}>
-            <p className={s.productPrice}>{priceHandle(elem)}</p>
-            {elem.discont_price && <p className={s.discount_price}>{price}</p>} 
-            {/* esli elem disc = true, togda render p */}
+              <p className={s.productTitle}>{elem.title}</p>
+
+            </abbr>
+
+            <div className={s.productPrices}>
+              <p className={s.productPrice}>{priceHandle(elem)}</p>
+              {elem.discont_price && <p className={s.discount_price}>{price}</p>}
+              {/* esli elem disc = true, togda render p */}
+            </div>
+
           </div>
-         
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 
 }
 
