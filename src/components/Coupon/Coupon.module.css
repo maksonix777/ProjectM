@@ -2,15 +2,18 @@
     margin-top: 32px;
     border-radius: 12px;
     max-width: 1360px;
-    height: 486px;
+    height: 100%;
+    
     background: linear-gradient(45deg,
             rgba(51, 153, 51, 1),
             rgba(11, 113, 11, 1));
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .discountTxt {
+ 
     margin-top: 24px;
     text-align: center;
     font-size: 64px;
@@ -20,7 +23,10 @@
 }
 
 .discountItems {
+
     display: flex;
+    width: 100%;
+    /* flex-direction:column-reverse; */
 }
 
 .discountInput {
@@ -37,21 +43,20 @@
 
     /* max-height: 383px; */
     width: 100%;
-    margin-right: 32px;
+    /* margin-right: 32px; */
 
     max-width: 100%;
     margin: 0 auto;
 
     border: 1px solid red;
     position: relative;
-
-    overflow: visible;
+    display: block;
 }
 
 .hands img {
     bottom: 0;
     width: 748px;
-    height: 360px;
+    /* height: 360px; */
     object-fit: cover;
     margin-left: 32px;
     margin-top: 23px;
@@ -60,4 +65,7 @@
     max-width: 100%;
     height: auto;
     display: block;
+}
+.formDiscount{
+    margin-bottom: 32px;
 }

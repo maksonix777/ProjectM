@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-
+.basketAllContent{
+    border: 1px solid red;
+    display: flex;
+    gap: 20px;
+    /* flex-direction: column; */
+}
 .productTxtAll{
     padding: 32px;
   
@@ -141,4 +146,43 @@ background-color: rgb(134, 14, 14);
 .allPrice{
     display: flex;
    align-items: end;
+}
+.OrderDetails{
+    height: 100%;
+    width:518px;
+    background-color: rgba(241, 243, 244, 1);
+    
+    padding: 32px;
+    border-radius: 12px;
+
+}
+.OrderDetails h3{
+    font-weight: 700;
+    font-size: 40px;
+}
+.ItemsCostTotal{
+ font-size: 56px;
+font-weight: 700;
+line-height:  61.6px ;
+color: black;
+}
+.OrderDetailsTxt{
+    display: flex;
+    flex-direction: column;
+    color: rgb(139, 139, 139);
+    font-size: 40px;
+    
+    
+}
+.TotalPrice{
+    display: flex;
+    align-items: baseline;
+    gap: 32px;
+}
+.buttonGreyContainer{
+    margin-bottom: 40px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
 }

@@ -5,10 +5,14 @@ import { ROOT_URL } from "../../index";
 import { fetchAllProducts } from "../../asyncActions/products";
 import s from './ProductsContainer.module.css';
 import ButtonCard from "../../ui/Buttons/ButtonCard";
+import FilterProducts from "../FilterProducts";
+import { addItemAction } from "../../store/reducers/basketReducer";
 
 function ProductsContainer({ type }) {
   const { id } = useParams();
   const { category_title, products } = useSelector((store) => store.products);
+  const { basket } = useSelector((store) => store.basket);
+
   const dispatch = useDispatch(); 
 
   useEffect(() => {
@@ -50,11 +54,17 @@ function ProductsContainer({ type }) {
   }
 
 
+  function AddToCartHandle(obj){
+    
+    dispatch(addItemAction({...obj, count: 1}))
+console.log(obj)
+  }
 
 return (
   <div className="wrapper">
  
     <h2 className={s.productsAllTitle}>All products</h2>
+    <FilterProducts/>
     <div className={s.productsContainer}>
       {products.map((elem) => (
         <div className={s.ProductCard} key={elem.id}>
@@ -62,8 +72,9 @@ return (
 
           <div className={s.imgBtnContainer}> 
               <img className={s.productsImg} src={ROOT_URL + elem.image} />
+
               <div className={s.btn}> 
-              <ButtonCard title="Add to card" widthBtn="284"/>
+              <ButtonCard onClick={()=> AddToCartHandle( elem)} title="Add to card" widthBtn="284"/>
               </div>
           </div>
 

@@ -8,12 +8,13 @@ export default function Coupon() {
     <div className="wrapper">
         <div className={s.discount}>
 
-           <p className={s.discountTxt}>5% off on the first order</p>
+            <p className={s.discountTxt}>5% off on the first order</p>
             <div className={s.discountItems}>
-            <div className={s.hands}>
-                <img src={discount} alt ="discount"/>
+            <img src={discount} alt ="discount"/>
+            <div className={s.formDiscount }>
+            <InputCoupon type= "coupon"/>
             </div>
-            <InputCoupon/>
+                
         </div>
         
     </div>

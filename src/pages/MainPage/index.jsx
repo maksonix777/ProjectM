@@ -40,15 +40,16 @@ return (
 
         <Coupon />
 
-            <div className={s.buttonGreyContainer}ref={saleRef}> 
+        <div className={s.buttonGreyContainer}ref={saleRef}> 
         <LinkButtonContainer title='Sale' />
         <LinkButton buttonText='All Sales'/>
-            <div className={s.buttonGrey}>
-            <Sale  />
-            </div>
+        </div>
+        <div className={s.buttonGrey}>
+            <Sale type='notAllSales' />
+            
         </div>
         
     </div>
-    
+     
 );
 }

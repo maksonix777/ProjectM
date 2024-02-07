@@ -31,7 +31,7 @@ function CategoriesContainer({ type }) {
         <div className={s.categoriesContainer}>
             {allCategories.map(elem => 
                 <div>
-                    <Link key={elem.id} to={`/categories/${elem.id}`}>
+                    <Link key={elem.id} to={"/categories/"+ elem.id}>
                     <img alt='categories' className={s.categoriesItem} src={ROOT_URL+elem.image}/>
                     <p className={s.categoriesName}>{elem.title}</p>
                     </Link>

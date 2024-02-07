@@ -6,10 +6,9 @@ export default function LinkButton({buttonText,link }) {
   return (
     <div >
         <Link to={link}>
-         <button className={s.linkButton}>{buttonText}</button>
-          </Link>
-           
-        
+        <button className={s.linkButton}>{buttonText}</button>
+      </Link>
+            
     </div>
   )
 }
