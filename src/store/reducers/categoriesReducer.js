@@ -1,6 +1,6 @@
 const defaultState = {
     category_title: '',
-    allCategories: [],
+    allCategories: [ ],
     
 }
 

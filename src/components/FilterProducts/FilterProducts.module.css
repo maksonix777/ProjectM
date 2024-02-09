@@ -1,34 +1,60 @@
-.sortAllContainer{
-    gap: 40px;
-    display: flex;
-    align-items: center;
-    border: 1px solid red;
-    display: flex;
-    margin-left: 40px;
-    width: fit-content;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 40px;
 
+.check_Box{
+  width: 36px;
+  height: 36px;
 }
-.price_filter input{
-    width: 112px;
-    height: 36px;
-    margin-right: 16px;
-    
-}
-.discount_filter input{ 
-    width: 36px;
-    height: 36px;
-  }
-  .discount_filter{
-   display: flex;
-   align-items: center;
-  }
 
-.sorted_filter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.check_Box {
+  margin-left: 12px;
+  accent-color: rgb(53, 168, 53);
+}
+
+.sortAllContainer {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.sorted_filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price_filter{
+  display: flex;
+}
+.price_inputFromTo{
+  display: flex;
+  flex-direction: row;
+}
+.price_filter input {
+  width: 112px;
+  height: 36px;
+  margin-left: 16px;
+  border-radius: 6px;
+}
+
+.discount_filter {
+  display: flex;
+  align-items: center;
+}
+
+.select_drop_down {
+  border-radius: 6px;
+  height: 36px;
+  margin-left: 16px;
+  font-size: 16px;
+  text-indent: 8px;
+  background-color: white;
+}
+
+.sortAllContainer input::placeholder {
+  font-size: 16px;
+  text-indent: 8px;
 }

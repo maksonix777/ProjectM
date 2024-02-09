@@ -12,8 +12,10 @@ export function fetchAllProducts(type) {
       .then((data) => {
         if (type === "allProducts") {
           dispatch(allProductsAction(data));
+
         } else if (type === "allSales") {
           dispatch(allSalesProductsAction(data));
+          
         } else if (type === "notAllSales") {
           dispatch(notAllSalesProductsAction(data));
         }

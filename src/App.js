@@ -11,6 +11,7 @@ import CategoriesPage from './pages/CategoriesPage';
 
 import SingleProduct from './components/SingleProduct';
 import BasketPage from './pages/BasketPage';
+import SingleProductPage from './pages/SingleProductPage';
 
 
 
@@ -25,9 +26,10 @@ function App() {
         <Route path='/categories/all' element={<CategoriesPage type='categories'/>} />
         <Route path='/products/all' element={<ProductsPage type='allProducts'/>} />
         <Route path='/allSales' element={<ProductsPage type='allSales'/>} />
-        <Route path='/categories/:id' element={<ProductsPage type='categoryProducts'/>} />
+        <Route path='/category/:id' element={<ProductsPage type='categoryProducts'/>} />
         <Route path='/emptyBasket' element={<BasketPage/>} />
-        <Route path='/product/:product_id' element={<SingleProduct/>}/> 
+        <Route path='/product/:product_id' element={<SingleProductPage/>}/> 
+
 
         <Route path='*' element={<NotFoundPage/>}/>
       </Routes>

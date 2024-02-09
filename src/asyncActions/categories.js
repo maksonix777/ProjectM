@@ -9,11 +9,14 @@ export function fetchAllCategories(type) {
     fetch(ROOT_URL + "/categories/all")
       .then((res) => res.json())
       .then((data) => {
+
         if (type === "allCategories") {
           dispatch(allCategoriesAction(data));
+
         } else if (type === "notAllCategories") {
           dispatch(notAllCategoriesAction(data));
         }
+        
       });
   };
 }

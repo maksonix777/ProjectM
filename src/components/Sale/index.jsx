@@ -14,11 +14,14 @@ function Sale({ type }) {
   const { category_title, products } = useSelector((store) => store.products);
   const dispatch = useDispatch(); 
 
+
+  
   useEffect(() => {
     if (type !== "category") {
       dispatch(fetchAllProducts(type));
     }
   }, [id, type]);
+
 
   function priceHandle(elem){
     let currentPrice = 0;
@@ -48,7 +51,7 @@ function Sale({ type }) {
   }
 
   // Filter products with a discount
-  const saleProducts = products.filter(elem => elem.discont_price);
+  const saleProducts = products;
 
   return (
     <div className="wrapper">

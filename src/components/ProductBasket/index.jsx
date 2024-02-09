@@ -40,6 +40,7 @@ function CounterShop({ elem }) {
 
 function ProductBasket({ type }) {
     const item = useSelector((store) => store.basket.items);
+    console.log(item);
     const { id } = useParams();
     const dispatch = useDispatch();
 

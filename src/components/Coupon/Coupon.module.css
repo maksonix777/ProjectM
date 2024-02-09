@@ -1,9 +1,8 @@
 .discount {
-    margin-top: 32px;
+    flex-wrap: wrap;
     border-radius: 12px;
-    max-width: 1360px;
     height: 100%;
-    
+    padding-right: 32px;
     background: linear-gradient(45deg,
             rgba(51, 153, 51, 1),
             rgba(11, 113, 11, 1));
@@ -12,8 +11,7 @@
     flex-wrap: wrap;
 }
 
-.discountTxt {
- 
+.discountTxt { 
     margin-top: 24px;
     text-align: center;
     font-size: 64px;
@@ -23,9 +21,10 @@
 }
 
 .discountItems {
-
-    display: flex;
-    width: 100%;
+    grid-auto-rows: wrap;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
     /* flex-direction:column-reverse; */
 }
 
@@ -37,20 +36,6 @@
 
 .discountInput::placeholder {
     color: white;
-}
-
-.hands {
-
-    /* max-height: 383px; */
-    width: 100%;
-    /* margin-right: 32px; */
-
-    max-width: 100%;
-    margin: 0 auto;
-
-    border: 1px solid red;
-    position: relative;
-    display: block;
 }
 
 .hands img {
@@ -66,6 +51,6 @@
     height: auto;
     display: block;
 }
-.formDiscount{
-    margin-bottom: 32px;
+.form{
+    margin-top: 40px;
 }

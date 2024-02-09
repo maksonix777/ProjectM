@@ -1,11 +1,11 @@
-const defaultState = {
+const defaultState= {
     items: [],
     sumTotal: 0,
     countItems: 0
 }
-/* add*/
-const ADD_ITEM = 'ADD_ITEM' 
-const DELETE_ITEM = 'DELETE_ITEM'
+
+const ADD_ITEM = 'ADD_ITEM' ;
+const DELETE_ITEM = 'DELETE_ITEM';
 
 export const basketReducer = (state = defaultState, action) => {
     switch(action.type){
@@ -15,7 +15,7 @@ export const basketReducer = (state = defaultState, action) => {
                 return {...state, items: state.items.map(el => {
                     if (el.id ===  action.payload.id){
                         el.count += action.payload.count;
-                    }
+                    } 
                     return el;
                 })}
             } else {

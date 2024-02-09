@@ -4,10 +4,17 @@ import s from './Header.module.css';
 import logo from '../../media/logo.png'
 import basket from '../../media/basket.png'
 import Basket from '../Basket';
+import { useSelector } from 'react-redux';
+
+
 
 
 export default function Header() {
+  const item = useSelector((store) => store.basket.items);/*  */
+  const count = item.reduce((acc, item) => acc + item.count, 0);
+  
   return (
+    
     <div > 
         <div className={s.line}></div>
         <header className="wrapper">

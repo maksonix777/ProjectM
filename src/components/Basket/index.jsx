@@ -3,12 +3,20 @@ import React from 'react';
 import s from './Basket.module.css';
 import basketImg from '../../media/basket.png';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 const Basket = ({ basketItems, removeFromBasket }) => {
   // Calculate the total number of items in the basket
+
   const totalItems = basketItems ? basketItems.reduce((acc, item) => acc + item.quantity, 0) : 0;
+
+console.log();
+
+
+
+
 
   return (
     <div className={s.basketItem}>
@@ -33,6 +41,7 @@ const Basket = ({ basketItems, removeFromBasket }) => {
           <li key={item.id}>
             <div>
               <img src={basketImg} alt={item.name} />
+              <div>{}</div>
             </div>
             <div>
               <p>{item.name} - ${item.price}</p>
