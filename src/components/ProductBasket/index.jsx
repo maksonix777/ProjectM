@@ -39,7 +39,7 @@ function CounterShop({ elem }) {
 }
 
 function ProductBasket({ type }) {
-    const item = useSelector((store) => store.basket.items);
+    const item = useSelector((store) => store.basket);
     console.log(item);
     const { id } = useParams();
     const dispatch = useDispatch();

@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 
 export default function Header() {
-  const item = useSelector((store) => store.basket.items);/*  */
+  const item = useSelector((store) => store.basket);
   const count = item.reduce((acc, item) => acc + item.count, 0);
   
   return (

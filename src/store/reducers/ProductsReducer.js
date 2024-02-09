@@ -27,8 +27,13 @@ export const productsReducer = (state = defaultState, action) => {
 
       case NOT_ALL_SALES:
         let not_all_sales_products = action.payload
-        .filter((elem) => elem.discont_price)
+        .filter((elem) => elem.discont_price).map(elem =>
+        {let percentSale = elem.discont_price / elem.price * 100;
+        return{...elem, percentSale: percentSale }}
+
+        ).sort((a,b) => a.percentSale - b.percentSale)
         .slice(0, 4);
+        
         return { products: not_all_sales_products };
 
 

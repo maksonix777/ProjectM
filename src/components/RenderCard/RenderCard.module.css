@@ -14,7 +14,10 @@ abbr{
     gap: 32px;
    
     }
-
+.productsContainer a{
+    text-decoration: none;
+    color: inherit;
+}
 .productTitle{
     
     margin:20px 32px 16px;

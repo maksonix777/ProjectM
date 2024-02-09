@@ -1,8 +1,8 @@
-const defaultState= {
-    items: [],
-    sumTotal: 0,
-    countItems: 0
-}
+const defaultState= [ ]
+    // items: [],
+    // sumTotal: 0,
+    // countItems: 0
+
 
 const ADD_ITEM = 'ADD_ITEM' ;
 const DELETE_ITEM = 'DELETE_ITEM';
@@ -10,21 +10,21 @@ const DELETE_ITEM = 'DELETE_ITEM';
 export const basketReducer = (state = defaultState, action) => {
     switch(action.type){
         case ADD_ITEM:
-            let findItemIndex = state.items.findIndex(el => el.id === action.payload.id);
+            let findItemIndex = state.findIndex(el => el.id === action.payload.id);
             if (findItemIndex !== -1){
-                return {...state, items: state.items.map(el => {
+                return  [  ...state.map(el => {
                     if (el.id ===  action.payload.id){
                         el.count += action.payload.count;
                     } 
                     return el;
-                })}
+                })]
             } else {
-                return {...state, items: [...state.items,  action.payload]};
+                return [ ...state,  action.payload];
             }
         case DELETE_ITEM:
-            let findItemIndex1 = state.items.findIndex(el => el.id === action.payload.id);
+            let findItemIndex1 = state.findIndex(el => el.id === action.payload.id);
             if(findItemIndex1 !== -1){
-                return {...state, items: state.items.filter(el => el.id !== action.payload.id)}
+                return [...state,  ...state.filter(el => el.id !== action.payload.id)]
             }
         default:
             return state;
