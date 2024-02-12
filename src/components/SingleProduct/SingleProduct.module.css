@@ -1,25 +1,34 @@
-.productCard{
+.productCard {
     display: flex;
     gap: 32px;
+    margin: 0 40px;
 }
-.productCard img{
+
+.productCard img {
     width: 780px;
+    height: 572px;
+    height: 100%;
     border-radius: 12px;
 }
-.description{
+
+.description {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-.cardPrice{
+
+.cardPrice {
+    align-items: baseline;
     display: flex;
+    gap: 32px;
 }
 
-.controlBtn{
+.controlBtn {
     height: 58px;
     gap: 32px;
 }
-.controlAll{
+
+.controlAll {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,52 +37,91 @@
 }
 
 .control button,
-.control p {
-  outline: 1px solid #ddd; 
-  margin: 0; 
-  width: 100%;
- 
-  
+.control span {
+    outline: 1px solid #ddd;
+    margin: 0;
+    width: 100%;
+}
+.control span {
+    position: absolute;
+    left: 44px;
+    height: 100%;
 }
 
-.control > p {
+/* .control > p {
     width: 96px;
     display: flex;
     justify-content: center;
-    align-items:  center;
-}
+    align-items: center;
+    
+} */
 
 .control {
-
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   
+    /* grid-template-columns: repeat(2, 1fr); */
     /* display: flex; */
-    gap: 32px;
-    align-items: stretch;
-}
-.control button:first-child{
-    position: absolute;
-}
-.control p{
-    position: absolute;
-    left: 30px;
-    height: 100%;
-}
-.control button:last-child{
-    position: absolute;
-    left: 100px;
-
+    
     
 }
+.control button:first-child {
+    position: absolute;
+}
+.control button:last-child {
+    position: absolute;
+    left: 120px;
+}
 
-.control button{
-    /* height: 100%; */
+.control button {
+    font-size: 30px;
     width: 58px;
     aspect-ratio: 1;
+    color: var(--txt-grey);
     border: 1px solid #ddd;
     background-color: #fff;
     border-radius: 6px;
     cursor: pointer;
     z-index: 5;
+}
+
+.productTitle {
+    font-size: 40px;
+}
+
+.oldPrice {
+    color: var(--txt-grey);
+    font-size: 40px;
+    text-decoration: line-through;
+    position: relative;
+    font-weight: 500;
+}
+
+.currentPrice {
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.discount {
+    background-color: rgb(51, 153, 51);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+    right: 20px;
+}
+
+.textDisc p {
+    margin-bottom: 16px;
+}
+.DescriptionTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.control span{
+    
+    text-align: center;
+    width: 90px;
+    padding: 20px;
 }

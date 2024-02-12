@@ -1,0 +1,13 @@
+.buttonGreyContainer{
+    display: flex;
+    align-items: center;
+    margin-block: 40px;
+}
+.buttonGreyContainer p{
+    margin: 20px;
+    
+}
+.looksLike{
+    font-size: 20px;
+    margin-top: 32px;
+}

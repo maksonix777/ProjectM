@@ -12,7 +12,7 @@ export default function Coupon() {
 
 
             <div className={s.discountItems}>
-                <div>
+                <div className={s.img_container}>
                     <img className={s.img_hands} src={discount} alt ="discount"/> 
                 </div>
             <div className={s.form}>

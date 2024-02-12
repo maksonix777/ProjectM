@@ -12,6 +12,7 @@ import CategoriesPage from './pages/CategoriesPage';
 import SingleProduct from './components/SingleProduct';
 import BasketPage from './pages/BasketPage';
 import SingleProductPage from './pages/SingleProductPage';
+import Breadcrumbs from './components/Breadcrumb/BreadNav';
 
 
 
@@ -21,17 +22,17 @@ function App() {
     
    <div >
     <Header/>
-      <Routes>
+    
+        <Routes>
         <Route path='/' element={<MainPage/>}/>
         <Route path='/categories/all' element={<CategoriesPage type='categories'/>} />
         <Route path='/products/all' element={<ProductsPage type='allProducts'/>} />
         <Route path='/allSales' element={<ProductsPage type='allSales'/>} />
         <Route path='/category/:id' element={<ProductsPage type='categoryProducts'/>} />
-        <Route path='/emptyBasket' element={<BasketPage/>} />
+        <Route path='/BasketProducts' element={<BasketPage/>} />
         <Route path='/product/:product_id' element={<SingleProductPage/>}/> 
 
-
-        <Route path='*' element={<NotFoundPage/>}/>
+      <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
       
     <Footer/>

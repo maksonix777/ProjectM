@@ -21,7 +21,7 @@
 }
 .discountInput input::placeholder {
     color: white;
-    text-indent: 30px;
+    text-indent: 10px;
 }
 
 .blackPlaceholder input{
@@ -47,7 +47,10 @@
     font-weight: 600;
 }
 
-button:hover {
+.couponBtn button:hover {
     color: white;
     background-color: #000000;
+}
+.discount_form input {
+    padding-left: 20px;
 }

@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-
 .basketAllContent{
-    border: 1px solid red;
     display: flex;
     gap: 20px;
     /* flex-direction: column; */
 }
 .productTxtAll{
     padding: 32px;
-  
     display: flex;
     flex-direction: column;
 }
@@ -20,28 +16,20 @@
     overflow: hidden;
 }
 .productsContainer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 32px;
+    /* flex-direction: column;  */
+    /* gap: 32px; */
+    flex:1;
    
     }
 
 .productTitle{
-    
-    /* margin:20px 32px 16px; */
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
     }
-/* .productTitle:hover{
-max-width: none;
-overflow:visible;
-text-overflow:clip;
-background-color: rgb(134, 14, 14);
-} */
+
    
 .productsAllTitle{
     font-size: 64px;
@@ -96,20 +84,11 @@ background-color: rgb(134, 14, 14);
    
     display: flex;
    gap: 32px;
-   
-   
-   
 }
-
 /*-----------*/
-.controllAll{
-    display: flex;
-    gap: 32px;
-}
-.control button,
-.control p {
-  outline: 1px solid #ddd; /* Замените цвет и толщину на необходимые значения */
-  margin: 0; /* Обнулить отступы, чтобы обводка была ближе к содержимому */
+.control button, .control p {
+  outline: 1px solid #ddd; 
+  margin: 0; 
 }
 
 .control > p {
@@ -121,8 +100,10 @@ background-color: rgb(134, 14, 14);
 }
 
 .control {
+    border: 1px solid var(--grey-divider);
     margin-top: 32px;
     display: flex;
+  border-radius: 12px;
 }
 
 .cardPriceContainer{
@@ -137,12 +118,7 @@ background-color: rgb(134, 14, 14);
     border-radius: 6px;
     cursor: pointer;
 }
-.closeBtn{
-    position: absolute;
-    right: 32px;
-    top: 32px;
-    cursor: pointer;
-}
+
 .allPrice{
     display: flex;
    align-items: end;
@@ -151,7 +127,9 @@ background-color: rgb(134, 14, 14);
     height: 100%;
     width:518px;
     background-color: rgba(241, 243, 244, 1);
-    
+    display: flex;
+    flex-direction: column;
+    gap:24px ;
     padding: 32px;
     border-radius: 12px;
 
@@ -166,6 +144,7 @@ font-weight: 700;
 line-height:  61.6px ;
 color: black;
 }
+
 .OrderDetailsTxt{
     display: flex;
     flex-direction: column;
@@ -185,4 +164,94 @@ color: black;
     display: flex;
     align-items: center;
     max-width: 1400px;
+}
+.TotalAndPrice{
+    display: flex;
+    justify-content: space-between;
+}
+.TotalAndPrice p{
+    color: rgb(139, 139, 139);
+    font-size: 40px;
+}
+.control span{
+    
+    text-align: center;
+    width: 90px;
+    padding: 20px;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+    padding: 32px;
+}
+
+button.closeBtn::before {
+    content: '\2715'; /* Unicode for MULTIPLICATION X */
+    font-size: 24px;
+    display: inline-block;
+    /* Adjust spacing as needed */
+}
+
+button.closeBtn {
+    border: none; 
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease;
+    /* Make background transparent */
+    color: black; /* Make text color transparent */
+}
+
+button.closeBtn:hover {
+    cursor: pointer;
+    transform: rotate(360deg); /* Rotate the button on hover */
+}
+.productsContainerCards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+/* .orderBtn{
+font-size: 20px;
+border: none;
+background-color: var(--green);
+} */
+.orderBtn{
+    white-space: nowrap;
+     width: 100%;
+     height: 58px;
+     padding: 10px 20px;
+     /* margin-top: 40px; */
+     
+     font-size: 20px;
+     font-weight: 500;
+     text-decoration: none;
+     background-color: rgba(51, 153, 51, 1);
+     
+     color: white;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+ .orderBtn:hover{
+     cursor: pointer;
+     border: 1px solid var(--light-grey);
+     background-color: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
+ }
+ .modalTxt{
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--txt-white);
+}
+ .congratulations{
+    font-size: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
+
+}
+.modalTxt p:not(:last-child){
+ margin-bottom: 10px;
 }

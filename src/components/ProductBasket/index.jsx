@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { ROOT_URL } from "../../index";
-import { fetchAllProducts } from "../../asyncActions/products";
-import s from "./ProductBasket.module.css";
-import ButtonCard from "../../ui/Buttons/ButtonCard";
-import InputCoupon from "../../ui/InputCoupon";
-// import { selectTotalCost } from "./SelectTotalCost";
-import LinkButton from "../../ui/Buttons/LinkButton";
-import LinkButtonContainer from "../../components/LinkButtonContainer";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { ROOT_URL } from '../../index';
+import { fetchAllProducts } from '../../asyncActions/products';
+import s from './ProductBasket.module.css';
+import ButtonCard from '../../ui/Buttons/ButtonCard';
+import InputCoupon from '../../ui/InputCoupon';
+import LinkButton from '../../ui/Buttons/LinkButton';
 import {
     addItemAction,
     deleteItemAction,
-} from "../../store/reducers/basketReducer";
+} from '../../store/reducers/basketReducer';
+import GreyButtonLane from '../GreyButtonLane';
+import Modal from '../Modal';
+ 
 
 function CounterShop({ elem }) {
     const dispatch = useDispatch();
@@ -26,21 +27,18 @@ function CounterShop({ elem }) {
         }
     };
 
-    // const handleDecrement = (elem) => { if (elem.count > 0) {elem.count - 1;}};
-
-    console.log(elem);
     return (
         <div className={s.control}>
             <button onClick={() => handleChange(elem, false)}>-</button>
-            <span>{elem.count}</span>
+            <span className={s.itemsAmount}>{elem.count}</span>
             <button onClick={() => handleChange(elem, true)}>+</button>
         </div>
     );
 }
 
 function ProductBasket({ type }) {
+    const [isModalVisible, setModalVisible] = useState(false);
     const item = useSelector((store) => store.basket);
-    console.log(item);
     const { id } = useParams();
     const dispatch = useDispatch();
 
@@ -53,76 +51,98 @@ function ProductBasket({ type }) {
             }
             return acc;
         }, 0);
-    }
+    };
 
     function priceHandle(elem) {
         let currentPrice = 0;
         let price = 0;
         if (elem.discont_price) {
-            currentPrice = "$" + elem.discont_price;
-            price = "$" + elem.price;
+            currentPrice = '$' + elem.discont_price;
+            price = '$' + elem.price;
         } else if (!elem.discont_price) {
-            currentPrice = "$" + elem.price;
-            price = "";
+            currentPrice = '$' + elem.price;
+            price = '';
         }
         return { currentPrice, price };
     }
+
+    const handleOrderClick = () => {setModalVisible(true);
+
+      
+    };
+
     return (
         <div className="wrapper">
             <div className={s.buttonGreyContainer}>
-                <LinkButtonContainer title="Shopping cart" />
+                <GreyButtonLane title="Shopping cart" />
                 <LinkButton buttonText="Back to the store" link="/products/all" />
-            </div> <div className={s.basketAllContent}>
-                <h2 className={s.productsAllTitle}>Basket Product</h2>
+            </div>
+
+            <div className={s.basketAllContent}>
                 <div className={s.productsContainer}>
-                    {item.map((elem) => (
-                        <div className={s.ProductCard} key={elem.id}>
-                            <button
-                                className={s.closeBtn}
-                                onClick={() => dispatch(deleteItemAction(elem))}>
-                                X
-                            </button>
-                            <div className={s.imgContainer}>
-                                <img
-                                    className={s.productsImg}
-                                    src={ROOT_URL + elem.image}
-                                    alt={elem.title}
-                                />
-                            </div>
-                            <div className={s.productTxtAll}>
-                                <p className={s.productTitle}>{elem.title}</p>
-                                <div className={s.controlAll}>
-                                    <CounterShop elem={elem} />
-                                    <div className={s.allPrice}>
-                                        <div className={s.productPrices}>
-                                            <p className={s.productPrice}>
-                                                {priceHandle(elem).currentPrice}
-                                            </p>
-                                            {elem.discont_price && (
-                                                <p className={s.discount_price}>
-                                                    {priceHandle(elem).price}
+                    <div className={s.productsContainerCards}>
+                        {item.map((elem) => (
+                            <div className={s.ProductCard} key={elem.id}>
+                                <button
+                                    className={s.closeBtn}
+                                    onClick={() => dispatch(deleteItemAction(elem))}
+                                ></button>
+                                <div className={s.imgContainer}>
+                                    <img
+                                        className={s.productsImg}
+                                        src={ROOT_URL + elem.image}
+                                        alt={elem.title}
+                                    />
+                                </div>
+                                <div className={s.productTxtAll}>
+                                    <p className={s.productTitle}>{elem.title}</p>
+                                    <div className={s.controlAll}>
+                                        <CounterShop elem={elem} />
+                                        <div className={s.allPrice}>
+                                            <div className={s.productPrices}>
+                                                <p className={s.productPrice}>
+                                                    {priceHandle(elem).currentPrice}
                                                 </p>
-                                            )}
+                                                {elem.discont_price && (
+                                                    <p className={s.discount_price}>
+                                                        {priceHandle(elem).price}
+                                                    </p>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
                 <div className={s.OrderDetails}>
                     <h3>Order details</h3>
                     <div className={s.OrderDetailsTxt}>
                         <p className={s.ItemsAmount}>{item.length} Item</p>
-                        <div className={s.TotalandPrice}>
-                            <p className={s.ItemsAmount}>Total</p>
-                            <h2 className={s.ItemsCostTotal}>${totalPrice()}</h2>
-                        </div>
                     </div>
-
-                    <InputCoupon type="order" />
+                    <div className={s.TotalAndPrice}>
+                        <p className={s.ItemsAmount}>Total</p>
+                        <h2 className={s.ItemsCostTotal}>
+                            ${totalPrice().toFixed(2).replace('.', ',')}
+                        </h2>
+                    </div>
+                    <InputCoupon onClick={handleOrderClick} type="order"  />
+                    <button className={s.orderBtn} onClick={handleOrderClick} >
+                        Order
+                    </button>
                 </div>
             </div>
+
+            {isModalVisible && (
+                <Modal onClose={() => setModalVisible(false)}>
+                    <div className={s.modalTxt}>
+                        <p className={s.congratulations}>Congratulations!</p>
+                        <p>Your order has been successfully placed on the website.</p>
+                        <p>A manager will contact you shortly to confirm your order.</p>
+                    </div>
+                </Modal>
+            )}
         </div>
     );
 }

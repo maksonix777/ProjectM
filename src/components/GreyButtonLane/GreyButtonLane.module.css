@@ -13,10 +13,9 @@
 .title{
   white-space: nowrap;
   padding-right:32px ;
-  font-family: "Montserrat", sans-serif;
-  color: rgb(40, 40, 40, 1);
+  color: rgb(40, 40, 40);
   font-size: 64px;
-  font-weight: 700;
+  
 }
 .greyLane{
    

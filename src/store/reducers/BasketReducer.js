@@ -23,8 +23,9 @@ export const basketReducer = (state = defaultState, action) => {
             }
         case DELETE_ITEM:
             let findItemIndex1 = state.findIndex(el => el.id === action.payload.id);
+
             if(findItemIndex1 !== -1){
-                return [...state,  ...state.filter(el => el.id !== action.payload.id)]
+                return [ ...state.filter(el => el.id !== action.payload.id)]
             }
         default:
             return state;

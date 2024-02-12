@@ -34,7 +34,8 @@ header {
     top:128px;
     left:0;
     height: 1px ;
-    width: 100vw;
+    width: 100%;
+    
     position: absolute;
     background-color: rgba(217, 217, 217, 1);
 }

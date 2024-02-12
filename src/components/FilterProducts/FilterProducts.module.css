@@ -20,7 +20,11 @@
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
-
+.sortAllContainer input{
+padding-left: 10px;
+font-size: 16px;
+font-weight: 500;
+}
 .sorted_filter {
   display: flex;
   align-items: center;

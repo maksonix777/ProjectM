@@ -17,3 +17,15 @@
     padding: 0 40px; 
     max-width: 100%; 
   } */
+  :root{
+    --green: rgb(51, 153, 51);
+	--white: rgb(255, 255, 255);
+	--black: rgb(40, 40, 40);
+	--grey-divider: rgb(221, 221, 221);
+	--grey: rgb(139, 139, 139);
+	--light-grey: #f1f3f4;
+	--txt-black: rgb(40, 40, 40);
+	--txt-white: rgb(255, 255, 255);
+	--txt-grey: rgb(139, 139, 139);
+
+  }

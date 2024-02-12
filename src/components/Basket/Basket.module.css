@@ -1,7 +1,24 @@
-.basketImg{
+.basketGrey{
   
    transition: transform 0.3s ease-in-out;
 }
-.basketImg:hover{
+.basketGrey:hover{
     transform: scale(1.1);
+}
+.basketGreenCount{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    aspect-ratio: 1 ;
+    background-color:var(--green);
+    color: var(--white);
+    top: 7px;
+    width: 26px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+}
+.basketGrey{
+    position: relative;
 }

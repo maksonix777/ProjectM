@@ -3,13 +3,14 @@ import s from "./Footer.module.css";
 import instagram from "../../media/instagram.png";
 import whatsapp from "../../media/whatsapp.png";
 import { Link } from "react-router-dom";
+import LinkButton from "../GreyButtonLane";
 
 export default function Footer() {
   return (
     <div className="wrapper">
       <footer>
-        <p className={s.contact}>Contact</p>
-
+        <h2 className={s.contact}>Contact</h2>
+     
 
 
         <div className={s.contact_details}>
@@ -61,6 +62,7 @@ export default function Footer() {
               marginwidth="0"
               src="https://maps.google.com/maps?width=1440&amp;height=350&amp;hl=en&amp;q=Starta%20Institute%20by%20Tel-Ran+(Starta%20Institute%20by%20Tel-Ran)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
+            <p className={s.name}>Maria Kozlova Project</p>
           </div>
       </footer>
     </div>

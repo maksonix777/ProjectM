@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ROOT_URL } from '../..';
 import ButtonCard from '../../ui/Buttons/ButtonCard';
 import { addItemAction } from '../../store/reducers/basketReducer';
+import ShowDescription from '../ShowDescription';
 
 
 export default function SingleProduct() {
@@ -32,7 +33,7 @@ export default function SingleProduct() {
   }, []);
 
   function incr() {
-    if (currentCount < 10)
+    if (currentCount < 24)/*  Products amount */
       setCurrentCount(prevCount => prevCount + 1);
   }
 
@@ -49,19 +50,15 @@ export default function SingleProduct() {
   }
 
   function AddToCartHandle(obj) {
-
-    dispatch(addItemAction({ ...obj, count: currentCount }))
-  
-  }
-
-
+    
+    dispatch(addItemAction({ ...obj, count: currentCount }))}
   const { id, title, description, price, image, count, discont_price } = products
 
 
 
 
   return (
-
+   <div class="wrapper"> 
 
     <div className="container">
 
@@ -71,39 +68,49 @@ export default function SingleProduct() {
         <div className={s.cardInfo}>
 
           <div className={s.description}>
-            <h3>{title}</h3>
+            <h3 className={s.productTitle}>{title}</h3>
 
             <div className={s.cardPrice}>
               {discont_price ? <p className={s.currentPrice}> ${discont_price}</p> : <p className={s.currentPrice}> ${price}</p>}
               {discont_price && <p className={s.oldPrice}>${price}</p>}
-              <p>persent</p>
+              {discont_price && <div className={s.discount}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</div>}
+              
             </div>
+
 
             <div className={s.controlBtn}>
               <div className={s.controlAll}>
                 <div className={s.control}>
                   <button onClick={decr}>-</button>
-                  <p>{currentCount}</p>
+                  <span className={s.itemsAmount}>{currentCount}</span>
                   <button onClick={incr}>+</button>
                 </div>
 
 
-                <ButtonCard title='Add to card' onClick={() => AddToCartHandle(products)} />
+                <ButtonCard title='Add to card'
+                            widthBtn="316px" 
+                            onClick={
+                            () => AddToCartHandle(products)} />
               </div>
               {/* /controllAll  */}
 
             </div>
-
-            <p>{description}</p>
+            <div className={s.textDisc}>
+            <p className={s.DescriptionTitle}>Description</p>
+             
+            <ShowDescription description={description} />
+             
+            </div>
+          
 
           </div>
-          <p>Read more</p>
           <div className={s.cardPriceContainer}>
           </div>
 
         </div>
         {/* cardInfo */}
       </div>
+    </div>
     </div>
   )
 }

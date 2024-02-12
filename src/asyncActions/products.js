@@ -2,7 +2,7 @@ import { ROOT_URL } from "../index";
 import {
   allProductsAction,
   allSalesProductsAction,
-  notAllSalesProductsAction,
+  notAllSalesProductsAction
 } from "../store/reducers/ProductsReducer";
 
 export function fetchAllProducts(type) {
@@ -15,7 +15,7 @@ export function fetchAllProducts(type) {
 
         } else if (type === "allSales") {
           dispatch(allSalesProductsAction(data));
-          
+
         } else if (type === "notAllSales") {
           dispatch(notAllSalesProductsAction(data));
         }

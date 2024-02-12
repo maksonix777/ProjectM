@@ -13,10 +13,11 @@ export const categoriesReducer = (state = defaultState, action) => {
     
     switch (action.type) {
         case ALL_CATEGORIES:
-            return { allCategories: action.payload }
+            return { allCategories: action.payload, category_title:"Categories" }
         case NOT_ALL_CATEGORIES:
             let notAllCategories = action.payload.slice(0,4)
-            return { allCategories: notAllCategories }
+
+            return { allCategories: notAllCategories  }
     default:
             return state
     }

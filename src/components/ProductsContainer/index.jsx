@@ -47,7 +47,7 @@ function ProductsContainer({ type }) {
     <div className="wrapper">
 
       <h2 className={s.productsAllTitle}>{category_title}</h2>
-      <FilterProducts />
+      <FilterProducts type={type} />
     {products && <RenderCard  products = {products} type = {type}/>}
     </div>
   );

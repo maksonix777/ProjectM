@@ -11,12 +11,12 @@ export function fetchAllCategories(type) {
       .then((data) => {
 
         if (type === "allCategories") {
-          dispatch(allCategoriesAction(data));
+          dispatch(allCategoriesAction(data));/*v reduser i */
 
         } else if (type === "notAllCategories") {
           dispatch(notAllCategoriesAction(data));
         }
-        
+
       });
   };
 }

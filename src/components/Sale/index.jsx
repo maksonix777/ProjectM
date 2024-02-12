@@ -52,10 +52,12 @@ function Sale({ type }) {
 
   // Filter products with a discount
   const saleProducts = products;
-
+console.log(saleProducts);
   return (
+    
     <div className="wrapper">
       <h2 className={s.productsAllTitle}></h2>
+    
       <div className={s.productsContainer}>
         {saleProducts.map((elem) => (
           <div className={s.ProductCard} key={elem.id}>

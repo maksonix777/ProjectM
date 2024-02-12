@@ -36,10 +36,8 @@ function saleHandle(elem) {
 
   if (elem.discont_price) {
     sale = '-' + Math.round(100 - (elem.discont_price * 100 / elem.price)) + '%'
-
-  }
-  else
-    sale = ''
+}
+  else sale = ''
 
   return sale
 }
@@ -56,10 +54,10 @@ console.log(type + '1213242326525')
 
 
     return (
-        <div>RenderCard
+        <div>
             <div className={s.productsContainer}>
-                {products?.map((elem) => (
-
+                {products?.map((elem) => ( 
+                  elem?.isShowFrom && elem?.isShowTo && elem?.isShowSale &&
                     <Link to={"/product/" + elem.id}>
                         <div className={s.ProductCard} key={elem.id}>
                             {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}

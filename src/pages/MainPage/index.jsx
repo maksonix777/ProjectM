@@ -5,7 +5,7 @@ import Coupon from "../../components/Coupon";
 import ButtonCard from "../../ui/Buttons/ButtonCard";
 import CategoriesContainer from "../../components/CategoriesContainer";
 import Sale from "../../components/Sale";
-import LinkButtonContainer from "../../components/LinkButtonContainer";
+import LinkButtonContainer from "../../components/GreyButtonLane";
 import LinkButton from "../../ui/Buttons/LinkButton";
 
 
@@ -13,6 +13,7 @@ export default function MainPage() {
 
 
 const saleRef = useRef();
+
 const handleClick = () => {
     saleRef.current?.scrollIntoView({ behavior: "smooth" });
 };
@@ -25,7 +26,10 @@ return (
        
             <div className={s.bannerTxt}> 
                 <p className={s.bannerText}>Amazing Discounts on Garden Products!</p>
-                <ButtonCard onClick={handleClick} title="Check out" widthBtn="218"/>
+                <div className={s.greenBtn}>
+                <ButtonCard onClick={handleClick} title="Check out" widthBtn="218" />
+                </div>
+                
             </div>
             </div>
         </div>
@@ -42,7 +46,7 @@ return (
 
         <div className={s.buttonGreyContainer}ref={saleRef}> 
         <LinkButtonContainer title='Sale' />
-        <LinkButton buttonText='All Sales'/>
+        <LinkButton buttonText='All Sales'link="/allSales" />
         </div>
         <div className={s.buttonGrey}>
             <Sale type='notAllSales' />

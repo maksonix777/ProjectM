@@ -1,0 +1,26 @@
+.readMore{
+    text-decoration: underline;
+}
+button.readMore {
+   
+    font-size: 16px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: underline; 
+}
+
+
+button.readMore:hover {
+    text-decoration: none; 
+    
+}
+/* .descriptionTxt{
+    flex-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */

@@ -51,7 +51,7 @@ background-color: rgb(134, 14, 14);
     
     overflow: hidden;
     border-radius: 12px;
-    border: 1px solid rgb(221,221,221);
+    border: 1px solid var(--grey-divider);
     
 }
 .productPrices{
