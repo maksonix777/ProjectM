@@ -8,6 +8,7 @@ import { ROOT_URL } from "../../index";
 import { fetchAllProducts } from "../../asyncActions/products";
 import s from './Sale.module.css';
 import ButtonCard from "../../ui/Buttons/ButtonCard";
+import { addItemAction } from '../../store/reducers/basketReducer';
 
 function Sale({ type }) {
   const { id } = useParams();
@@ -49,7 +50,11 @@ function Sale({ type }) {
 
     return sale;
   }
+  function AddToCartHandle(obj) {
 
+    dispatch(addItemAction({ ...obj, count: 1 }))
+  
+  }
   // Filter products with a discount
   const saleProducts = products;
 console.log(saleProducts);
@@ -66,7 +71,7 @@ console.log(saleProducts);
             <div className={s.imgBtnContainer}> 
               <img className={s.productsImg} src={ROOT_URL + elem.image} />
               <div className={s.btn}> 
-                <ButtonCard title="Add to cart" widthBtn="284"/>
+                <ButtonCard onClick={()=> AddToCartHandle(elem)}  title="Add to cart" widthBtn="284"/>
               </div>
             </div>
 

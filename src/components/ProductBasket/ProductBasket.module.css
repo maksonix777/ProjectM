@@ -185,27 +185,27 @@ color: black;
     padding: 32px;
 }
 
-button.closeBtn::before {
+ .closeBtn::before {
     content: '\2715'; /* Unicode for MULTIPLICATION X */
     font-size: 24px;
     display: inline-block;
     /* Adjust spacing as needed */
 }
 
-button.closeBtn {
+ .closeBtn {
     border: none; 
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     background-color: rgba(255, 255, 255, 0);
     transition: transform 0.3s ease;
-    /* Make background transparent */
-    color: black; /* Make text color transparent */
+   
+    color: black; 
 }
 
-button.closeBtn:hover {
+ .closeBtn:hover {
     cursor: pointer;
-    transform: rotate(360deg); /* Rotate the button on hover */
+    transform: rotate(360deg); 
 }
 .productsContainerCards{
     display: flex;
@@ -213,11 +213,7 @@ button.closeBtn:hover {
     gap: 16px;
 
 }
-/* .orderBtn{
-font-size: 20px;
-border: none;
-background-color: var(--green);
-} */
+
 .orderBtn{
     white-space: nowrap;
      width: 100%;
@@ -242,6 +238,7 @@ background-color: var(--green);
      color: rgb(255, 255, 255);
  }
  .modalTxt{
+   
     font-weight: 300;
     font-size: 20px;
     color: var(--txt-white);
@@ -255,3 +252,5 @@ background-color: var(--green);
 .modalTxt p:not(:last-child){
  margin-bottom: 10px;
 }
+
+

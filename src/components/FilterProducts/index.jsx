@@ -38,8 +38,6 @@ const dispatch = useDispatch();
           console.log(updatedProducts);
           dispatch(filterAllAction(updatedProducts))
       } 
-      
-      
       switch (value) {
           case 'default':
               console.log(value);
@@ -68,8 +66,8 @@ const dispatch = useDispatch();
 
       <div className={s.price_filter}>
         <label>Price</label>                      
-          <input type="text" placeholder="from" name="from" />
-          <input type="text" placeholder="to" name="to" />
+          <input type="number" placeholder="from" name="from" />
+          <input type="number" placeholder="to" name="to" />
         </div>
 
       {type!=="allSales" && <div className={s.discount_filter}>

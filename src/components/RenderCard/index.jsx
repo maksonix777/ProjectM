@@ -43,7 +43,7 @@ function saleHandle(elem) {
 }
 
 
-function AddToCartHandle(obj) {
+ function AddToCartHandle(obj) {
 
   dispatch(addItemAction({ ...obj, count: 1 }))
 
@@ -66,7 +66,7 @@ console.log(type + '1213242326525')
                                 <img className={s.productsImg} src={ROOT_URL + elem.image} />
 
                                 <div className={s.btn}>
-                                    <ButtonCard onClick={() => AddToCartHandle(elem)} title="Add to card" widthBtn="284" />
+                                    <ButtonCard onClick={() => AddToCartHandle(elem)} title="Add to cart" widthBtn="284" />
                                 </div>
                             </div>
 
@@ -78,7 +78,8 @@ console.log(type + '1213242326525')
 
                             <div className={s.productPrices}>
                                 <p className={s.productPrice}>{priceHandle(elem)}</p>
-                                {elem.discont_price && <p className={s.discount_price}>{price}</p>}
+                                {elem.discont_price && 
+                                <p className={s.discount_price}>{elem.price}</p>}
                                 {/* esli elem disc = true, togda render p */}
                             </div>
 

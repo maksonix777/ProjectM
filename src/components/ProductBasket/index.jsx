@@ -83,8 +83,7 @@ function ProductBasket({ type }) {
                     <div className={s.productsContainerCards}>
                         {item.map((elem) => (
                             <div className={s.ProductCard} key={elem.id}>
-                                <button
-                                    className={s.closeBtn}
+                                <button className={s.closeBtn}
                                     onClick={() => dispatch(deleteItemAction(elem))}
                                 ></button>
                                 <div className={s.imgContainer}>

@@ -11,12 +11,11 @@ export default function ButtonCard({onClick, title, widthBtn}) {
       if (title!=="Check out"){
       setBtnTitle("Added")
       }
+      
   }
   return (
     <div>
-      <button onClick={(e) => 
-      preventDefault(e)} 
-      className={s.checkout_btn} 
+      <button onClick={(e) => preventDefault(e)} className={btnTitle=="Added"? s.addedBtn : s.checkout_btn } 
       style={{width: widthBtn }}> {btnTitle} 
       </button>
       </div>

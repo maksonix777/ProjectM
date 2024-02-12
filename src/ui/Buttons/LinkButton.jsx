@@ -6,7 +6,7 @@ export default function LinkButton({buttonText,link }) {
   return (
     < >
         <Link to={link}>
-        <button className={s.linkButton}>{buttonText}</button>
+        <button className={s.linkButton}>{buttonText} </button>
        </Link>
             
     </>

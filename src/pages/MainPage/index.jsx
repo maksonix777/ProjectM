@@ -7,6 +7,7 @@ import CategoriesContainer from "../../components/CategoriesContainer";
 import Sale from "../../components/Sale";
 import LinkButtonContainer from "../../components/GreyButtonLane";
 import LinkButton from "../../ui/Buttons/LinkButton";
+import CloseButton from "../../components/CloseButton";
 
 
 export default function MainPage() {
@@ -48,6 +49,7 @@ return (
         <LinkButtonContainer title='Sale' />
         <LinkButton buttonText='All Sales'link="/allSales" />
         </div>
+        
         <div className={s.buttonGrey}>
             <Sale type='notAllSales' />
             

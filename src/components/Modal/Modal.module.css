@@ -1,4 +1,3 @@
-/* Modal.module.css */
 .modalOverlay {
     position: fixed;
     top: 0;
@@ -34,4 +33,32 @@ display: flex;
   
 width: 100px;
 height:100px;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+ .closeBtn::before {
+    content: '\2715'; /* Unicode for MULTIPLICATION X */
+    font-size: 34px;
+    display: inline-block;
+    /* Adjust spacing as needed */
+}
+
+ .closeBtn {
+    border: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease;
+   
+    color: rgb(255, 255, 255); 
+}
+
+ .closeBtn:hover {
+    cursor: pointer;
+    transform: rotate(360deg); 
 }
