@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
          <div className={s.map}>
             <iframe
-              width="1440"
+              width="100%"
               height="350"
               frameborder="0"
               scrolling="no"

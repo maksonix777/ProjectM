@@ -1,6 +1,10 @@
-.categoriesAll{
-  display: flex;
+
+.categoriesAllContainer img {
+  width: 316px;
+  height: 360px;
+
 }
+
 .categoriesContainer {
     display: flex;
     gap: 29px;
@@ -16,14 +20,6 @@
 
 .categories{
  padding: 0 40px ;
-}
-.categoriesTitle {
-  margin-top: 40px;
-  font-size: 64px;
-  font-weight: 700;
-  
-  padding-right: 32px;
-  margin-bottom: 40px;
 }
 
 .categoriesItem {
@@ -48,4 +44,25 @@
   font-size: 20px;
   font-weight: 500;
 }
+
+@media (max-width: 360px){
+  .categoriesContainer {
+    display: flex;
+    gap: 29px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .categoriesAllContainer img {
+    width: 320px;
+    height: 220px;
+  }
+  .categoriesAllContainer img {
+    width: 316px;
+    height: 360px;
+
+}
+
+}
+  
 

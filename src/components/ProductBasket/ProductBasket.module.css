@@ -252,5 +252,8 @@ color: black;
 .modalTxt p:not(:last-child){
  margin-bottom: 10px;
 }
-
+.greybtnMainPage{
+  
+    margin-top: 40px;
+}
 

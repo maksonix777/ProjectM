@@ -61,9 +61,7 @@ console.log(saleProducts);
   return (
     
     <div className="wrapper">
-      <h2 className={s.productsAllTitle}></h2>
-    
-      <div className={s.productsContainer}>
+     <div className={s.productsContainer}>
         {saleProducts.map((elem) => (
           <div className={s.ProductCard} key={elem.id}>
             {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}

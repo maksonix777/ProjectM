@@ -18,7 +18,7 @@ export default function Header() {
     <div > 
         <div className={s.line}></div>
         <header className="wrapper">
-        <div> <img src={logo} alt= "img" /> </div>
+        <div> <img className={s.logo} src={logo} alt= "img" /> </div>
         <div className={s.navbar}>
             <Link to={'/'}> Main Page </Link>
             <Link to={'/categories/all'}> Categories </Link>

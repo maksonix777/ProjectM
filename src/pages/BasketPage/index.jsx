@@ -19,7 +19,8 @@ export default function BasketPage() {
           (<div>
          <div className={s.buttonGreyContainer}>
                 <GreyButtonLane title="Shopping cart" />
-                <LinkButton buttonText="Back to the store" link="/products/all" />
+                <div className={s.greybtnMainPage} >
+                <LinkButton buttonText="Back to the store" link="/products/all" /></div>
                 </div>
          
                 <Link to={'/products/all'}><ButtonCard title="continue shopping"/></Link>

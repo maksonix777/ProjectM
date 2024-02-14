@@ -25,7 +25,7 @@ function CategoriesContainer({ type }) {
     return (
     <div className="wrapper"> 
     <div className={s.categoriesAll}>
-    <h2 className={s.categoriesTitle}>{category_title}</h2>
+    
     </div>
 
         <div className={s.categoriesContainer}>

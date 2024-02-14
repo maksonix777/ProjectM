@@ -23,8 +23,8 @@
 .discountItems {
     grid-auto-rows: wrap;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 32px;
+    grid-template-columns:  3fr 2fr;
+    
     
     /* flex-direction:column-reverse; */
 }
@@ -42,22 +42,68 @@
 
 .form{
     margin-top: 40px;
-    margin-bottom: 32px;
-}
-
-.img_container{
-    position: relative;
+  
 }
 .img_hands {
+    
     bottom: 0;
-    /* margin-left: 32px; */
+  
     position: absolute;
     max-width: 100%;
     display: block;
-    /* add */
+    
     width: 748px;
     height: 360px;
     object-fit: cover;
-    /* fixed position for right side */
+   
     object-position: right;
+    margin-left: 60px;
+}
+.img_container{
+    position: relative;
+    display: flex;
+}
+.img_handsMobile{
+    display: none;
+}
+
+@media (max-width: 360px) {
+    .img_hands {
+        display: none;
+    }
+
+    .discountTxt {
+        font-size: 40px;
+    }
+
+    .discount {
+        margin: 0 20px;
+    }
+
+    .forHands{
+     border-bottom-right-radius: 12px;
+     border-bottom-left-radius: 12px;
+        height:232px ;
+     background-position:  center ;
+     background-size:  144%;
+     background-repeat: no-repeat;
+     background-image: url(../../media/discount.png);
+     background-position-y: 10px;
+    }
+
+    .img_handsMobile {
+        width: 454px; /* Take up the full width of the container */
+        height: 232px; /* Take up the full height of the container */
+        object-fit: cover; /* Cover the container with the image, cutting off excess */
+        display: block;
+        
+    }
+    .discount {
+       
+        background: linear-gradient(45deg,
+                rgba(51, 153, 51, 1)5%,
+                rgba(11, 113, 11, 1))70%;
+        
+        
+    }
 }

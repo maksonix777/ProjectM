@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-
-
 .categoriesAllContainer img {
     width: 316px;
     height: 360px;
@@ -32,13 +28,31 @@
 
 }
 .buttonGreyContainer{
-    margin-bottom: 40px;
-    margin-top: 80px;
+    /* margin-bottom: 40px;
+    margin-top: 80px; */
     display: flex;
     align-items: center;
+    
     max-width: 1400px;
 }
 .bannerTxt{
     padding-top: 20px; 
     background-clip: content-box;
+}
+
+.greybtnMainPage{
+    margin-top: 40px;
+}
+@media (max-width:360px){
+    .banner {
+        background-image: url(../../media/checkOut.jpg);
+        width: 360px;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+    }
+    .bannerText{
+        font-size: 52px;
+    }
+    
 }

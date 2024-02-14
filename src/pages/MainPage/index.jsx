@@ -8,6 +8,7 @@ import Sale from "../../components/Sale";
 import LinkButtonContainer from "../../components/GreyButtonLane";
 import LinkButton from "../../ui/Buttons/LinkButton";
 import CloseButton from "../../components/CloseButton";
+import GreyButtonLane from "../../components/GreyButtonLane";
 
 
 export default function MainPage() {
@@ -35,9 +36,12 @@ return (
             </div>
         </div>
         
-    <div className={s.buttonGreyContainer}>    
-        <LinkButtonContainer title='Categories'/> 
+    <div className={s.buttonGreyContainer}> 
+        <GreyButtonLane title='Categories'/> 
+        <div className={s.greybtnMainPage}>
         <LinkButton buttonText='All Categories'link="categories/all"/>
+    </div>
+       
     </div>
         <div className={s.categoriesAllContainer}>
         <CategoriesContainer type="notAllCategories" />
@@ -46,10 +50,11 @@ return (
         <Coupon />
 
         <div className={s.buttonGreyContainer}ref={saleRef}> 
-        <LinkButtonContainer title='Sale' />
-        <LinkButton buttonText='All Sales'link="/allSales" />
+        <GreyButtonLane title='Sale' />
+        <div className={s.greybtnMainPage}>
+        <LinkButton buttonText='All Sales'link="/allSales" /></div>
         </div>
-        
+        <CloseButton/>
         <div className={s.buttonGrey}>
             <Sale type='notAllSales' />
             

@@ -46,3 +46,19 @@ header {
 .basketItem:hover{
     transform: scale(1.1);
 }
+
+@media (max-width:360px){
+    .navbar{
+        display: none;
+    }
+    .logo{
+        width: 44px;
+        height: 44px;
+    }
+    header{
+        height: 68px;
+    }
+    .line{
+        display: none;
+    }
+}
