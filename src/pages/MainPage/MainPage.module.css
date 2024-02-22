@@ -55,13 +55,13 @@
     }
     }
 
-    @media (max-width: 1000px){
+    @media (max-width: 1440px){
     .banner{
     padding-bottom: 120px;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
 
    
         .banner{
@@ -70,18 +70,18 @@
     }  
     
     
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         .banner{
             padding-bottom: 326px;
             height: 600px;
             }
             }
 
-    @media (max-width:360px){
+    @media (max-width:480px){
             .banner {
                 margin-top: none;
-                width: 360px;
-                height: 600px;
+                max-width: 480px;
+                height: 100%;
                 background-size: cover;
                 background-position: center;
                 padding-bottom: 250px;

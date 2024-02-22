@@ -64,7 +64,7 @@ h3 {
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
     h1 {
         font-size: 89px;
         line-height: 99px;
@@ -77,7 +77,7 @@ h3 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     /* h1 {
         font-size: 68px;
        
@@ -89,30 +89,28 @@ h3 {
         font-size: 48px;
         line-height: 110%;
     }
-    h3{
-        font-size: 40px;
-    }
+  
 }
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
     h1 {
-        font-size: 68px;
+        font-size: 52px;
        
     }
     h2 {
         margin-right: 0;
         margin-left: 0;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 40px;
         line-height: 110%;
     }
     h3{
-        font-size: 30px;
+        font-size: 36px;
     }
 
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 580px) {
     h1 {
         padding-top: 50px;
         font-weight: 700;
@@ -132,13 +130,13 @@ h3 {
         font-size: 36px;
         line-height: 110%;
     }
-}
+} */
 
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
  .wrapper {
      margin: 0 auto;
-     max-width: 360px;
+     max-width: 480px;
  }
 
  h1 {

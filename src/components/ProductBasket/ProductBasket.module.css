@@ -255,10 +255,10 @@ color: black;
   
     margin-top: 40px;
 }
-@media (max-width:1000){
+@media (max-width:1440){
 
 }
-@media (max-width:768px){
+@media (max-width:1000px){
     .basketAllContent{
         display: flex;
         gap: 20px;

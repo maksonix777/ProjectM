@@ -129,11 +129,9 @@ background-color: rgb(134, 14, 14);
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
 }
-@media(max-width:1440px){
 
-}
 
-@media (max-width: 1000px){
+@media (max-width: 1440px){
     .productsImg{
       
         object-fit: cover;
@@ -159,7 +157,7 @@ background-color: rgb(134, 14, 14);
         }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .ProductCard{
         object-fit: cover;
         overflow: hidden;
@@ -179,7 +177,7 @@ background-color: rgb(134, 14, 14);
  
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .ProductCard{
         object-fit: cover;
         overflow: hidden;
@@ -198,7 +196,7 @@ background-color: rgb(134, 14, 14);
     }
   }
 
-@media (max-width: 360px){
+@media (max-width: 480px){
     .ProductCard{
       margin: 0 20px;
         object-fit: cover;

@@ -22,16 +22,17 @@
 .basketGrey{
     position: relative;
 }
-@media  (max-width: 360px){
+@media  (max-width: 768px){
     .basketGrey img{
         width:32px ;
         height: 32px;
     }
 }
+
+
 @media  (max-width: 480px){
     .basketGrey img{
         width:32px ;
         height: 32px;
     }
 }
-    

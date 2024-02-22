@@ -38,7 +38,7 @@
   margin-bottom: 40px;
 }
 
-@media (max-width:768px){
+@media (max-width:1000px){
   .contact_details{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -50,7 +50,7 @@
 }
 
 
-@media (max-width:480px){
+@media (max-width:768px){
   .contact_details{
     display: grid;
     grid-template-columns: 1fr;
@@ -62,7 +62,7 @@
 }
 
 
-@media (max-width:360px){
+@media (max-width:480px){
   .contact_details{
         display: grid;
         grid-template-columns: 1fr;

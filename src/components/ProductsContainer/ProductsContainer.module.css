@@ -24,12 +24,7 @@ abbr{
     text-overflow: ellipsis;
     max-width: 200px;
     }
-/* .productTitle:hover{
-max-width: none;
-overflow:visible;
-text-overflow:clip;
-background-color: rgb(134, 14, 14);
-} */
+
    
 .productsAllTitle{
     font-size: 64px;
@@ -65,15 +60,15 @@ background-color: rgb(134, 14, 14);
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 110%; /* 44px */
+    line-height: 110%; 
 }
-/* ProductsPage.module.css */
+
 
 .ProductCard {
     position: relative;
     height: 422px;
    width: 316px;
-    /* Other styles for ProductCard */
+ 
   }
   
   .discountPercentage {
@@ -82,7 +77,7 @@ background-color: rgb(134, 14, 14);
     right: 0;
     color: white;
     padding: 5px;
-    /* Other styles for discountPercentage */
+  
   }
   
 .greenDiscount{
@@ -103,7 +98,7 @@ background-color: rgb(134, 14, 14);
    
 }
 .btn{
-    /**/
+  
     position: absolute;
     margin-top: 30%;
     top: 45%;

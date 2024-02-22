@@ -58,6 +58,7 @@ export default function SingleProduct() {
 
   return (
     <div className='wrapper_All'>
+      
       <div className={`${s.cardContainer} wrapper`}>
         <div className={s.title}>
           <h3>{title}</h3>
@@ -91,8 +92,8 @@ export default function SingleProduct() {
         <div className={s.description}>
           <ShowDescription description={description}/>
         </div>
+      </div>
+     
     </div>
-  
-  </div>
   )
 }
