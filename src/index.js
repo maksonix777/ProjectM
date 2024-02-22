@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { store } from './store'
 
 
-export const ROOT_URL = 'http://localhost:3333'
+export const ROOT_URL = 'https://telran-backend.onrender.com'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
