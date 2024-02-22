@@ -10,6 +10,7 @@ import { basketReducer } from './reducers/basketReducer';
 
 const rootReducer = combineReducers({
   products: productsReducer,
+  
   categories: categoriesReducer,
   basket: basketReducer
 });
