@@ -5,10 +5,6 @@ import { ROOT_URL } from "../../index";
 import { fetchAllCategories} from "../../asyncActions/categories";
 import s from "./Categories.module.css"
 
-
-
-
-
 function CategoriesContainer({ type }) {
   const { id } = useParams();
   const { category_title, allCategories } = useSelector((store) => store.categories);
@@ -18,17 +14,20 @@ function CategoriesContainer({ type }) {
       dispatch(fetchAllCategories(type))
   }, [id, type]);
 
-
- 
-
-
-    return (
-    <div className="wrapper"> 
-    <div className={s.categoriesAll}>
+  let style = ""
+ if (type=="allCategories"){
+ style = s.AllCategoriesPage
+ }
+ if(type=="notAllCategories"){
+    style = s.notAllCategoriesPage
+ }
+return (
+    <div className="wrapper_All"> 
+    <div className={`${s.categoriesAll} wrapper`} >
     
-    </div>
+    
 
-        <div className={s.categoriesContainer}>
+        <div className={style}>
             {allCategories.map(elem => 
                 <div>
                     <Link key={elem.id} to={"/category/" + elem.id}>
@@ -37,6 +36,7 @@ function CategoriesContainer({ type }) {
                     </Link>
                 </div>
             )}
+        </div>
         </div>
         </div>
     

@@ -24,3 +24,12 @@ button.readMore:hover {
     overflow: hidden;
     text-overflow: ellipsis;
 } */
+.titleDescr{
+font-weight: 600;
+font-size: 20px;
+color:  black;
+margin-bottom: 16px;
+}
+.descriptionTxt{
+  width: 90%;
+}

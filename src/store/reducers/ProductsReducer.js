@@ -91,7 +91,7 @@ export const productsReducer = (state = defaultState, action) => {
           category_title: action.payload.category.title, products:getDefaultState(action.payload.data) }/* can get title */
 
       case  SINGLE_PRODUCT:
-        return { products: action.payload[0] }
+        return { products: action.payload[0] } 
 
 /*      */
 case FILTER_ALL:

@@ -28,10 +28,10 @@ export default function InputCoupon({ type, onclick }) {
   
    useEffect(() => {} , [isShowModal ])
     
-   
+   const modalTxt = ['Your Sale Coupon was successfully sended!']
   return (
     <div>
-      {isShowModal && <Modal onClose={() => setIsShowModal(false)}>
+      {isShowModal && <Modal modalTxt={modalTxt} onClose={() => setIsShowModal(false)}>
         <div className={s.modalTxt}>
           <p className={s.congratulations}>Congratulations!</p>
           <p>Your order has been successfully placed on the website.</p>
@@ -44,13 +44,14 @@ export default function InputCoupon({ type, onclick }) {
         <input {...register("email", { required: "" })} className={s.discountInput} type="email" id="email" name="email" placeholder="Email" />
 
         {type === "order" ? (
-          <ButtonCard onClick={onclick} title="Order" widthBtn="100%" type={type} disabled={formSubmitted} />
+          // <ButtonCard onClick={onclick} title="Order" widthBtn="100%" type={type} disabled={formSubmitted} />
+          <></>
         ) : (
           <button 
            className={formSubmitted ? s.disabledBtn : s.couponBtn}
            type="submit" 
            disabled={formSubmitted}>{formSubmitted  ? "Request Submitted" : "Get a discount" }
-          </button>
+         </button>
         )}
       </form>
     </div>

@@ -7,9 +7,9 @@ import LinkButton from "../GreyButtonLane";
 
 export default function Footer() {
   return (
-    <div className="wrapper">
-      <footer>
-        <h2 className={s.contact}>Contact</h2>
+    <div className="wrapper_All">
+      <footer className="wrapper">
+        <h2 >Contact</h2>
      
 
 
@@ -56,10 +56,10 @@ export default function Footer() {
             <iframe
               width="100%"
               height="350"
-              frameborder="0"
+              frameBorder="0"
               scrolling="no"
-              marginheight="0"
-              marginwidth="0"
+              marginHeight="0"
+              marginWidth="0"
               src="https://maps.google.com/maps?width=1440&amp;height=350&amp;hl=en&amp;q=Starta%20Institute%20by%20Tel-Ran+(Starta%20Institute%20by%20Tel-Ran)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
             <p className={s.name}>Maria Kozlova Project</p>

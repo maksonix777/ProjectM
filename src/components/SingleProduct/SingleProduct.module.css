@@ -1,78 +1,42 @@
-.productCard {
-    display: flex;
-    gap: 32px;
-    margin: 0 40px;
+.addCardtBtn {
+    margin-top: 14px;
 }
 
-.productCard img {
-    width: 780px;
-    height: 572px;
-    height: 100%;
-    border-radius: 12px;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.cardPrice {
-    align-items: baseline;
-    display: flex;
-    gap: 32px;
-}
-
-.controlBtn {
-    height: 58px;
-    gap: 32px;
-}
-
-.controlAll {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-    gap: 32px;
-}
-
-.control button,
-.control span {
+.controlAll button,
+.controlAll span {
     outline: 1px solid #ddd;
     margin: 0;
     width: 100%;
 }
-.control span {
+
+.controlAll span {
     position: absolute;
-    left: 44px;
+    left: 40px;
     height: 100%;
 }
 
-/* .control > p {
-    width: 96px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-} */
+.controlAll span {
 
-.control {
+    text-align: center;
+    width: 90px;
+    padding: 20px;
+}
+
+
+.controlBtn {
     position: relative;
-   
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* display: flex; */
-    
-    
-}
-.control button:first-child {
-    position: absolute;
-}
-.control button:last-child {
-    position: absolute;
-    left: 120px;
 }
 
-.control button {
+.controlBtn button:first-child {
+    position: absolute;
+}
+
+.controlBtn button:last-child {
+    position: absolute;
+    left: 100px;
+}
+
+.controlBtn button {
     font-size: 30px;
     width: 58px;
     aspect-ratio: 1;
@@ -84,44 +48,232 @@
     z-index: 5;
 }
 
-.productTitle {
-    font-size: 40px;
+
+.cardContainer {
+    margin-top: 80px;
+    display: grid;
+    grid-gap: 0 32px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+        "img  title  title"
+        "img price price"
+        "img control control"
+        "img  description  description";
+    /* grid-template-rows: 70px 80px 140px; */
 }
 
-.oldPrice {
-    color: var(--txt-grey);
-    font-size: 40px;
-    text-decoration: line-through;
+.title {
+    grid-area: title;
+    margin-bottom: 60px;
+
+}
+
+.img {
+    grid-area: img;
+    width: 100%;
+
+
+}
+
+.img img {
     position: relative;
-    font-weight: 500;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.control {
+    grid-area: control;
+}
+
+.price {
+    grid-area: price;
+}
+
+.cardPrice {
+    display: flex;
+    align-items: flex-end;
 }
 
 .currentPrice {
-    font-size: 64px;
-    font-weight: 700;
+    margin-top: 0;
+    margin-right: 32px;
 }
 
-.discount {
-    background-color: rgb(51, 153, 51);
-    padding: 4px 8px;
-    border-radius: 6px;
+.oldPrice {
+    color: var(--grey);
+    text-decoration: line-through;
+    margin-bottom: 20px;
+}
+
+.description {
+    min-width: 300px;
+    grid-area: description;
+
+}
+
+h4 {
     color: white;
-    font-size: 20px;
-    position: relative;
-    top: -30px;
-    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    align-self: start;
+    right: 16px;
+    top: 16px;
+    width: 63px;
+    height: 34px;
+    background-color: var(--green);
+    z-index: 1;
 }
 
-.textDisc p {
-    margin-bottom: 16px;
+.discountSmall {
+    display: none;
 }
-.DescriptionTitle{
-    font-size: 20px;
-    font-weight: 600;
+
+
+
+@media (max-width:1000px) {
+    .cardContainer {
+        grid-gap: 0 32px;
+
+        grid-template-columns: 50%;
+    }
+
+    .oldPrice {
+        font-size: 40px;
+    }
+
+    .cardContainer {
+
+        display: grid;
+        grid-gap: 0 32px;
+        grid-template-columns: 50%;
+        grid-template-areas:
+            "img  title  title"
+            "img price price"
+            "img control control"
+            "img  description  description";
+        /* grid-template-rows: 70px 80px 140px; */
+    }
 }
-.control span{
-    
-    text-align: center;
-    width: 90px;
-    padding: 20px;
+
+@media screen and (max-width:768px) and (min-height:480px) {
+    .cardContainer {
+        margin-top: 20px;
+        display: grid;
+        grid-gap: 10px 20px;
+        grid-template-areas:
+            "img  title  title"
+            "img  price price"
+            "img  control control"
+            "description  description  description";
+        grid-template-rows: 150px 58px 150px;
+        grid-template-columns: 50%;
+    }
+
+    .oldPrice {
+        font-size: 32px;
+    }
+}
+
+
+
+
+@media (max-width:480px) {
+    .discount {
+         display: none;
+    }
+    .img {
+        position: relative;
+    }
+
+    .discountSmall  {
+        display: flex;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+   
+
+    .cardContainer {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+            "title  title  title"
+            "img price price"
+            "img control control"
+            "description  description  description";
+        grid-template-rows: 100px 20px auto;
+        grid-template-columns: 60%;
+    }
+
+    .oldPrice {
+        /* font-size: 28px; */
+        margin-bottom: 4px;
+        /* padding-bottom: 0; */
+    }
+
+    .addCardtBtn {
+        margin-top: 14px;
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width:360px) {
+    .title h3, .description {
+     margin: auto 20px;
+
+    }
+
+    .cardContainer {
+
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "title"
+            "img"
+            "price "
+            "control "
+            "description ";
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+
+    .currentPrice {
+        margin-top: 0px;
+
+        margin-bottom: 0px;
+
+    }
+
+    .oldPrice {
+
+        margin-bottom: 4px;
+        padding-bottom: 0;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    .price {
+        display: flex;
+        justify-content: center;
+    }
+
+    .controlAll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .img img {
+        position: relative;
+
+    }
+
 }

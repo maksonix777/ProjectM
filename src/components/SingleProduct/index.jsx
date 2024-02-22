@@ -8,6 +8,7 @@ import { ROOT_URL } from '../..';
 import ButtonCard from '../../ui/Buttons/ButtonCard';
 import { addItemAction } from '../../store/reducers/basketReducer';
 import ShowDescription from '../ShowDescription';
+import CounterShop from '../CounterShop';
 
 
 export default function SingleProduct() {
@@ -50,67 +51,48 @@ export default function SingleProduct() {
   }
 
   function AddToCartHandle(obj) {
-    
-    dispatch(addItemAction({ ...obj, count: currentCount }))}
+
+    dispatch(addItemAction({ ...obj, count: currentCount }))
+  }
   const { id, title, description, price, image, count, discont_price } = products
 
-
-
-
   return (
-   <div class="wrapper"> 
-
-    <div className="container">
-
-      <div className={s.productCard}>
-
-        <div><img src={`${ROOT_URL}/${image}`} alt="" /></div>
-        <div className={s.cardInfo}>
-
-          <div className={s.description}>
-            <h3 className={s.productTitle}>{title}</h3>
-
-            <div className={s.cardPrice}>
-              {discont_price ? <p className={s.currentPrice}> ${discont_price}</p> : <p className={s.currentPrice}> ${price}</p>}
-              {discont_price && <p className={s.oldPrice}>${price}</p>}
-              {discont_price && <div className={s.discount}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</div>}
-              
-            </div>
-
-
-            <div className={s.controlBtn}>
-              <div className={s.controlAll}>
-                <div className={s.control}>
-                  <button onClick={decr}>-</button>
-                  <span className={s.itemsAmount}>{currentCount}</span>
-                  <button onClick={incr}>+</button>
-                </div>
-
-
-                <ButtonCard title='Add to card'
-                            widthBtn="316px" 
-                            onClick={
-                            () => AddToCartHandle(products)} />
-              </div>
-              {/* /controllAll  */}
-
-            </div>
-            <div className={s.textDisc}>
-            <p className={s.DescriptionTitle}>Description</p>
-             
-            <ShowDescription description={description} />
-             
-            </div>
-          
-
-          </div>
-          <div className={s.cardPriceContainer}>
+    <div className='wrapper_All'>
+      <div className={`${s.cardContainer} wrapper`}>
+        <div className={s.title}>
+          <h3>{title}</h3>
           </div>
 
+        <div className={s.img}>
+            <img  src={`${ROOT_URL}/${image}`} alt="" />
+            {discont_price && <h4 className={s.discountSmall}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</h4>}
         </div>
-        {/* cardInfo */}
-      </div>
+
+
+        <div className={s.controlAll}>
+            <CounterShop elem={products} type = {"singleProduct"}/>
+            <div className={s.addCardtBtn}>
+            <ButtonCard title='Add to card'
+            widthBtn="316px"
+            onClick={ () => AddToCartHandle(products)} />
+            </div>
+        </div>
+              
+             
+
+        <div className={s.price}>
+        <div className={s.cardPrice}>
+                        {discont_price ? <h2 className={s.currentPrice}> ${discont_price}</h2> : <h2 className={s.currentPrice}> ${price}</h2>}
+                        {discont_price && <h3 className={s.oldPrice}>${price}</h3>}
+                        {discont_price && <h4 className={s.discount}>{`-${Math.round(100 - discont_price * 100 / price)}%`}</h4>}
+          
+        </div>
+        </div>
+        <div className={s.description}>
+          <ShowDescription description={description}/>
+        </div>
     </div>
-    </div>
+  
+  </div>
   )
 }

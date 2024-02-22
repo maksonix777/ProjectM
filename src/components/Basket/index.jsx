@@ -13,7 +13,7 @@ const Basket = ({ basketItems, removeFromBasket }) => {
   console.log(products);
 return (
     <div className={s.basketItem}>
-      <div className={s.basketGrey}>
+      <div className={s.basketGrey}alt="logo">
         <Link to='/BasketProducts'> <img src={basketImg}  alt="Basket" /> </Link> 
       { totalItems > 0 && <div className={s.basketGreenCount}>{totalItems}</div>}
       </div>

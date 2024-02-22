@@ -54,7 +54,7 @@ console.log(type + '1213242326525')
 
 
     return (
-        <div>
+        <div >
             <div className={s.productsContainer}>
                 {products?.map((elem) => ( 
                   elem?.isShowFrom && elem?.isShowTo && elem?.isShowSale &&
@@ -77,9 +77,9 @@ console.log(type + '1213242326525')
                             </abbr>
 
                             <div className={s.productPrices}>
-                                <p className={s.productPrice}>{priceHandle(elem)}</p>
+                                <h3 className={s.productPrice}>{priceHandle(elem)}</h3>
                                 {elem.discont_price && 
-                                <p className={s.discount_price}>{elem.price}</p>}
+                                <h3 className={s.discount_price}>{elem.price}</h3>}
                                 {/* esli elem disc = true, togda render p */}
                             </div>
 

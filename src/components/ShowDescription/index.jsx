@@ -13,7 +13,8 @@ const ShowDescription = ({ description }) => {
 
     return (
         <div>
-            <p className={`${s.descriptionTxt} ${showFullDescription ? '' : s.truncatedDescription}`}>
+              <p className={s.titleDescr}>Description</p>
+              <p className={`${s.descriptionTxt} ${showFullDescription ? '' : s.truncatedDescription}`}>
                 {showFullDescription ? description : truncatedDescription + (hasMore ? '...' : '')}
             </p>
             {hasMore && (

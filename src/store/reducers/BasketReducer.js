@@ -6,6 +6,7 @@ const defaultState= [ ]
 
 const ADD_ITEM = 'ADD_ITEM' ;
 const DELETE_ITEM = 'DELETE_ITEM';
+const CLEAN_ITEM = 'CLEAN_ITEM';
 
 export const basketReducer = (state = defaultState, action) => {
     switch(action.type){
@@ -26,7 +27,9 @@ export const basketReducer = (state = defaultState, action) => {
 
             if(findItemIndex1 !== -1){
                 return [ ...state.filter(el => el.id !== action.payload.id)]
-            }
+            };
+            case CLEAN_ITEM:
+               return [ ];
         default:
             return state;
     }
@@ -34,6 +37,6 @@ export const basketReducer = (state = defaultState, action) => {
 
 
 
-
 export const addItemAction = (payload) => ({type: ADD_ITEM, payload})
 export const deleteItemAction = (payload) => ({type: DELETE_ITEM, payload})
+export const cleanItemAction = ( ) => ({type: CLEAN_ITEM})

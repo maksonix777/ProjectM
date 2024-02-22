@@ -1,0 +1,83 @@
+/* .control{
+   
+    display: flex;
+    gap: 32px;
+}
+
+.control button, .control span {
+  outline: 1px solid #ddd; 
+  margin: 0; 
+}
+
+.control > span {
+    width: 96px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.control {
+    border: 1px solid var(--grey-divider);
+    margin-top: 32px;
+    display: flex;
+  border-radius: 12px;
+}
+
+
+.control button{
+    width: 58px;
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.control span{
+    
+    text-align: center;
+    width: 90px;
+    padding: 20px;
+}
+ */
+
+ .control > p {
+    width: 96px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    border: 1px solid var(--grey-divider);
+}
+
+.control {
+  
+    /* margin-top: 32px; */
+    display: flex;
+    
+    
+  
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+.control button {
+    width: 58px;
+    aspect-ratio: 1;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+

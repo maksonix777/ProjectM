@@ -1,0 +1,153 @@
+.burgerLine{
+    width: 32px;
+    height: 3px;
+    background-color: var(--black);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    
+}
+.greyBG{
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.378);
+    z-index: 2;
+    
+}
+
+.burger{
+    cursor: pointer;
+    display: none;
+    
+}
+
+.menuAndBtn{
+    display: none;
+}
+.navbar{
+    display: none;
+}
+
+.openNavBar{
+    width: 60%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding-top:70px ;
+    position: absolute;
+    right: 0;
+    z-index: 50;
+   
+    
+}
+.openNavbar a{
+    margin-bottom: 36px;
+    margin-right: 20px;
+    margin-left: 32px;
+    display: block;
+    display: flex;flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    
+}
+.openNavbar a{
+    font-size: 24px;
+    margin-bottom: 36px;
+    margin-right: 20px;
+    margin-left: 32px;
+    display: block;
+    display: flex;flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.closeBtn {
+    position: absolute;
+    right: 42px;
+    top:10px;
+}
+
+ .closeBtn::before {
+    content: '\2715'; /* Unicode for MULTIPLICATION X */
+    font-size: 34px;
+    display: inline-block;
+    /* Adjust spacing as needed */
+}
+
+ .closeBtn {
+    border: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease;
+   
+    color: rgb(0, 0, 0); 
+}
+
+ .closeBtn:hover {
+    cursor: pointer;
+    transform: rotate(360deg); 
+}
+.closeBtnNavBar{
+    
+    margin-top: 20px;
+}
+@media (max-width: 1000px) {
+
+}
+@media (max-width: 768px) {
+    .menuAndBtn{
+        display: block;
+    }
+    .burger{
+        display: block;
+    }
+    .burger{
+        cursor: pointer;
+        display: block;
+    }
+}
+
+@media (max-width: 580px) {
+
+
+}
+
+@media (max-width: 480px) {
+    .openNavBar a{
+        font-size: 24px;
+        margin-bottom: 36px;
+        margin-right: 20px;
+        margin-left: 32px;
+        display: block;
+        display: flex;flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        
+    }
+}
+
+
+@media (max-width: 360px) {
+.wrapper {
+margin: 0 auto;
+max-width: 360px;
+}
+.openNavbar a{
+    font-size: 18px;
+    margin-bottom: 32px;
+    margin-right: 20px;
+    margin-left: 32px;
+    display: block;
+    display: flex;flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+
+
+}

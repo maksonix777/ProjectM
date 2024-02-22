@@ -1,4 +1,4 @@
-import s from './App.css'
+import  './App.css'
 // import SingleProductPage from './pages/SingleProductPage';
 import NotFoundPage from './pages/NotFoundPage';
 import MainPage from './pages/MainPage';

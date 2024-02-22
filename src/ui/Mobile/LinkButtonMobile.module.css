@@ -21,28 +21,24 @@
 }
 
  .laneButton{
-    
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 0px;
         
     }
+
+
+
+
     @media (max-width: 360px){
         .wrapper {
             margin: 0 auto;
             max-width: 360px;
         }
      
-        .linkButton{
-       display: none;
-        }
+        
      }
      
-     @media  screen and (max-width:1440px) and (min-height:360px) {
-        .linkButton a{
-            display:block;
-             }
-          
-    
-    }
+   

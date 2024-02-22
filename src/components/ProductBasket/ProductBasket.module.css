@@ -16,8 +16,7 @@
     overflow: hidden;
 }
 .productsContainer{
-    /* flex-direction: column;  */
-    /* gap: 32px; */
+   
     flex:1;
    
     }
@@ -70,7 +69,7 @@
     font-weight: 600;
     line-height: 110%;
 }
-/* ProductsPage.module.css */
+
 
 .ProductCard {
  position: relative;
@@ -256,4 +255,13 @@ color: black;
   
     margin-top: 40px;
 }
+@media (max-width:1000){
 
+}
+@media (max-width:768px){
+    .basketAllContent{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+}

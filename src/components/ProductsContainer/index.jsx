@@ -26,16 +26,16 @@ function ProductsContainer({ type }) {
       dispatch(fetchAllProducts(type));
     }
     if(type == "allSales"){
-      console.log('a!! ll  sale !!');
+      
       dispatch(fetchAllProducts(type));
     }
     if(type == "allProducts"){
-      console.log(' all products  !!');
+      
       dispatch(fetchAllProducts(type));
     }
     if(type == "categoryProducts"){
 
-      console.log(' Category products !!');
+     
         dispatch(categoryProduct(id));
     }
   }, [id, type]);

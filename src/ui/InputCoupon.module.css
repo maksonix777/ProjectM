@@ -31,7 +31,7 @@
 }
 .blackPlaceholder input::placeholder{
     color: rgb(92, 92, 92);
-    text-indent: 30px;
+    /* text-indent: 30px; */
 }
 .couponBtn {
     margin-top: 16px;

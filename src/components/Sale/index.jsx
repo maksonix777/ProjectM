@@ -60,8 +60,10 @@ function Sale({ type }) {
 console.log(saleProducts);
   return (
     
-    <div className="wrapper">
-     <div className={s.productsContainer}>
+    <div className="wrapper_All">
+
+
+     <div className={`${s.productsContainer} wrapper`}>
         {saleProducts.map((elem) => (
           <div className={s.ProductCard} key={elem.id}>
             {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}
@@ -78,7 +80,7 @@ console.log(saleProducts);
             </abbr>
 
             <div className={s.productPrices}>
-              <p className={s.productPrice}>{priceHandle(elem)}</p>
+              <h3 >{priceHandle(elem)}</h3>
               {elem.discont_price && <p className={s.discount_price}></p>} 
             </div>
           </div>

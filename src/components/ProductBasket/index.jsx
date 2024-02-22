@@ -9,6 +9,7 @@ import InputCoupon from '../../ui/InputCoupon';
 import LinkButton from '../../ui/Buttons/LinkButton';
 import {
     addItemAction,
+    cleanItemAction,
     deleteItemAction,
 } from '../../store/reducers/basketReducer';
 import GreyButtonLane from '../GreyButtonLane';
@@ -35,6 +36,7 @@ function CounterShop({ elem }) {
         </div>
     );
 }
+
 
 function ProductBasket({ type }) {
     const [isModalVisible, setModalVisible] = useState(false);
@@ -67,10 +69,11 @@ function ProductBasket({ type }) {
     }
 
     const handleOrderClick = () => {setModalVisible(true);
-
+  
       
     };
-
+    const modalTxt = ['Your order has been successfully placed on the website.',
+     'A manager will contact you shortly to confirm your order.']
     return (
         <div className="wrapper">
             <div className={s.buttonGreyContainer}>
@@ -133,14 +136,14 @@ function ProductBasket({ type }) {
                         Order
                     </button>
                 </div>
-            </div>
+            </div>   
 
             {isModalVisible && (
-                <Modal onClose={() => setModalVisible(false)}>
+                <Modal modalTxt={modalTxt} onClose={() => { setModalVisible(false);dispatch(cleanItemAction()) } }>
                     <div className={s.modalTxt}>
                         <p className={s.congratulations}>Congratulations!</p>
-                        <p>Your order has been successfully placed on the website.</p>
-                        <p>A manager will contact you shortly to confirm your order.</p>
+                        <p>Your order has been successfully placed on the website.</p>
+                        <p>A manager will contact you shortly to confirm your order.</p>
                     </div>
                 </Modal>
             )}

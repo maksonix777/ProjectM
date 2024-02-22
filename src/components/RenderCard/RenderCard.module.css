@@ -12,7 +12,7 @@ abbr{
     
     display: flex;
     flex-wrap: wrap;
-    margin: 0 38px;
+    
     gap: 32px;
     
     }
@@ -79,7 +79,7 @@ background-color: rgb(134, 14, 14);
 .ProductCard {
     position: relative;
     height: 422px;
-   width: 316px;
+    width: 316px;
     /* Other styles for ProductCard */
   }
   
@@ -129,3 +129,93 @@ background-color: rgb(134, 14, 14);
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
 }
+@media(max-width:1440px){
+
+}
+
+@media (max-width: 1000px){
+    .productsImg{
+      
+        object-fit: cover;
+        border-bottom: 1px solid rgb(221,221,221);
+        overflow: hidden;
+    }
+    .ProductCard{
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--grey-divider);
+        position: relative;
+        height:398px;
+        width: 225px;
+    }
+    .productsContainer{
+    
+        display: flex;
+        flex-wrap: wrap;
+       
+        gap: 20px;
+        
+        }
+}
+
+@media (max-width: 768px) {
+    .ProductCard{
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--grey-divider);
+        position: relative;
+        height:372px;
+        width: 354px;
+    }
+    .productsImg{
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid rgb(221,221,221);
+        overflow: hidden;
+    }
+ 
+}
+
+@media (max-width: 480px) {
+    .ProductCard{
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--grey-divider);
+        position: relative;
+        height:358px;
+        width: 210px;
+    }
+    .productsImg{
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid rgb(221,221,221);
+        overflow: hidden;
+    }
+  }
+
+@media (max-width: 360px){
+    .ProductCard{
+      margin: 0 20px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--grey-divider);
+        position: relative;
+        height:335px;
+        width: 320px;
+    }
+    .productsImg{
+        height: 220px;
+        width: 320px;
+        object-fit: cover;
+        border-bottom: 1px solid rgb(221,221,221);
+        overflow: hidden;
+    }
+   
+  }
+  
