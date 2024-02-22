@@ -33,14 +33,14 @@ export default function MainPage() {
                 </div>
             </div>
 
-            <div className={s.buttonGreyContainer}>
+            <div className={`${s.buttonGreyContainer} wrapper_All`}>
                 <GreyButtonLane title='Categories' />
                 <div className={s.greybtnMainPage}>
                     <LinkButton buttonText='All Categories' link="categories/all" />
                 </div>
 
             </div>
-            <div className={s.categoriesAllContainer}>
+            <div className={s.categoriesAllContainer} >
                 <CategoriesContainer type="notAllCategories" />
             </div>
 
@@ -51,7 +51,7 @@ export default function MainPage() {
 
             <Coupon />
 
-            <div className={s.buttonGreyContainer} ref={saleRef}>
+            <div className={`${s.buttonGreyContainer} wrapper_All`} ref={saleRef}>
                 <GreyButtonLane title='Sale' />
                 <div className={s.greybtnMainPage}>
                     <LinkButton buttonText='All Sales' link="/allSales" /></div>
