@@ -2,7 +2,7 @@
     flex-wrap: wrap;
     border-radius: 12px;
     height: 100%;
-    padding-right: 32px;
+    /* padding-right: 32px; */
     background: linear-gradient(45deg,
             rgba(51, 153, 51, 1),
             rgba(11, 113, 11, 1));
@@ -58,7 +58,7 @@
     object-fit: cover;
    
     object-position: right;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 .img_container{
     position: relative;
@@ -68,7 +68,16 @@
     display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .discountItems {
+        grid-auto-rows: wrap;
+        display: grid;
+        grid-template-columns:  1fr;
+        
+        
+        /* flex-direction:column-reverse; */
+    }
+    
     .img_hands {
         display: none;
     }

@@ -13,46 +13,21 @@ import CounterShop from '../CounterShop';
 
 export default function SingleProduct() {
 
-  // const id_One_Product = useParams() 
 
-  const { products } = useSelector(store => store.products)
-
-  console.log(products);
-
-
-
+  let { products } = useSelector(store => store.products)
+  
   const dispatch = useDispatch();
   const { product_id } = useParams()
-
-
-  const [currentCount, setCurrentCount] = useState(1);
-
 
 
   useEffect(() => {
     dispatch(fetchProductById(product_id))
   }, []);
 
-  function incr() {
-    if (currentCount < 24)/*  Products amount */
-      setCurrentCount(prevCount => prevCount + 1);
-  }
-
-
-  function decr() {
-    if (currentCount > 1)
-      setCurrentCount(currentCount - 1);
-  }
-
-
-  function addPayload() {
-    const payload = { product: products, count: currentCount }
-    // dispatch(addManyToCartAction(payload))
-  }
 
   function AddToCartHandle(obj) {
 
-    dispatch(addItemAction({ ...obj, count: currentCount }))
+    dispatch(addItemAction(obj))
   }
   const { id, title, description, price, image, count, discont_price } = products
 

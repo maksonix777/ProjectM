@@ -12,6 +12,18 @@
     margin-top: 32px;
 }
 .greybtnMainPage{
-  
+    
     margin-top: 40px;
+    
+}
+.buttonGreyContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-block: 40px;
+    
+}
+@media (max-width: 768px){
+.greybtnMainPage{
+    display: none;
+}
 }

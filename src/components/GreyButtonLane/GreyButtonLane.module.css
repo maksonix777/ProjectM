@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 20px;
     
    
 }
@@ -19,9 +19,9 @@ position: relative;
 .greyLane{
     margin-top: 40px;
     position: absolute;
- right: 0;
- left: 50px;
-    border-top: 1px solid rgb(139,139,139);
+    right: 20px;
+    left: 50px;
+    border-top: 1px solid var(--grey-divider);
     z-index: -1;
 }
 @media(max-width:768px){

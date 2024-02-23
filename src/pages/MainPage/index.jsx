@@ -25,7 +25,7 @@ export default function MainPage() {
     return (
         <div >
             <div className={s.banner}>
-                <div className={s.bannerTxt}>
+                <div className={`${s.bannerTxt} wrapper_All `}>
                     <h1 className={s.bannerText}>Amazing Discounts on Garden Products!</h1>
                     <div className={s.greenBtn}>
                         <ButtonCard onClick={handleClick} title="Check out" widthBtn="218" />

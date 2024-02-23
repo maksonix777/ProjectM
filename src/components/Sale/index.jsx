@@ -64,7 +64,7 @@ console.log(saleProducts);
 
 
      <div className={`${s.productsContainer} wrapper`}>
-        {saleProducts.map((elem) => (
+        {Array.isArray(saleProducts) && saleProducts.map((elem) => (
           <div className={s.ProductCard} key={elem.id}>
             {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}
 

@@ -6,7 +6,7 @@ import InputCoupon from '../../ui/InputCoupon';
 export default function Coupon() {
     return (
         <div className="wrapper_All">
-            <div className={s.discount} >
+            <div className={`${s.discount} wrapper`} >
                 <div className={s.discountTxt}>5% off on the first order</div>
                 <div className={s.discountItems}>
 

@@ -1,7 +1,8 @@
 
 
 .discount_form {
-   width: 100%;
+    margin-right: 32px;
+   /* width: 100%; */
     /* margin-top: 56px; */
     /* margin-right: 32px; */
     display: flex;
@@ -74,10 +75,10 @@
     border-radius: 12px;
     color: var(--green);
 } 
-@media (max-width: 360px) {
+@media (max-width: 768px) {
     .discount_form{
-        width: 280px;
-        margin: 0 20px;
+      margin-left: 20px;
+   margin-right: 20px;
     }
   
 }

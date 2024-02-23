@@ -18,7 +18,7 @@
 }
 .productsContainer{
     display: flex;
-    flex-wrap: wrap;
+    
     gap: 32px;
     margin-bottom: 20px;
    
@@ -144,50 +144,47 @@ background-color: rgb(134, 14, 14);
         border: 1px solid var(--grey-divider);
         position: relative;
         height:398px;
-        width: 225px;
+        width: 100%;
     }
 }
 
 @media (max-width: 1000px) {
-    .ProductCard{
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 12px;
-        border: 1px solid var(--grey-divider);
-        position: relative;
-        height:372px;
-        width: 354px;
-    }
-    .productsImg{
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-        border-bottom: 1px solid rgb(221,221,221);
-        overflow: hidden;
-    }
- 
+  
+    .productsContainer{
+        display: flex;
+        flex-wrap:wrap ;
+       
+        gap: 32px;
+        margin-bottom: 20px;
+       
+        }
+        .ProductCard{
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid var(--grey-divider);
+            position: relative;
+            height:335px;
+            width: 47%;
+        }
+        .productsImg{
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid rgb(221,221,221);
+            overflow: hidden;
+        }
 }
 
 @media (max-width: 768px) {
-    .ProductCard{
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 12px;
-        border: 1px solid var(--grey-divider);
-        position: relative;
-        height:358px;
-        width: 210px;
-    }
-    .productsImg{
-        height: 220px;
-        width: 100%;
-        object-fit: cover;
-        border-bottom: 1px solid rgb(221,221,221);
-        overflow: hidden;
-    }
-  }
-
-@media (max-width: 480px){
+    .productsContainer{
+        display: flex;
+        flex-wrap:wrap ;
+       
+        gap: 32px;
+        margin-bottom: 20px;
+       
+        }
     .ProductCard{
         object-fit: cover;
         overflow: hidden;
@@ -195,15 +192,45 @@ background-color: rgb(134, 14, 14);
         border: 1px solid var(--grey-divider);
         position: relative;
         height:335px;
-        width: 320px;
+        max-width: 45%;
     }
     .productsImg{
         height: 220px;
-        width: 320px;
+        width:100%;
         object-fit: cover;
         border-bottom: 1px solid rgb(221,221,221);
         overflow: hidden;
     }
-   
+  }
+
+@media (max-width: 480px){
+  
+    .productsContainer{
+        display: flex;
+        flex-wrap:wrap ;
+        
+        justify-content: center;
+        gap: 32px;
+        margin-bottom: 20px;
+       
+        }
+    .ProductCard{
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--grey-divider);
+        position: relative;
+        height:100%;
+        max-width: 100%;
+        width: 420px;
+        
+    }
+    .productsImg{
+        height: 220px;
+        width:100%;
+        object-fit: cover;
+        border-bottom: 1px solid rgb(221,221,221);
+        overflow: hidden;
+    }
   }
   

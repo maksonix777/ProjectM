@@ -12,6 +12,7 @@ const ALL_SALE_PRODUCTS = "ALL_SALE_PRODUCTS";
 const NOT_ALL_SALES = "NOT_ALL_SALES";
 const ONE_CATEGORY_PRODUCTS = "ONE_CATEGORY_PRODUCTS";
 const SINGLE_PRODUCT = "SINGLE_PRODUCT";
+const ADD_COUNT_PRODUCT = "ADD_COUNT_PRODUCT"
 
 const FILTER_ALL = 'FILTER_ALL';
 const FILTER_BY_DEFAULT = 'FILTER_BY_DEFAULT';
@@ -91,10 +92,12 @@ export const productsReducer = (state = defaultState, action) => {
           category_title: action.payload.category.title, products:getDefaultState(action.payload.data) }/* can get title */
 
       case  SINGLE_PRODUCT:
-        return { products: action.payload[0] } 
+        return { products: {...action.payload[0], count: 1} } 
 
-/*      */
-case FILTER_ALL:
+      case ADD_COUNT_PRODUCT:
+        return { products: action.payload}
+
+        case FILTER_ALL:
  
   if(action.payload.from >=0){
       let filterAll = action.payload.products.map(el => {
@@ -129,6 +132,8 @@ export const notAllSalesProductsAction = (payload) => ({type: NOT_ALL_SALES,payl
 
 export const oneCategoryProductsAction = (payload) => ({type: ONE_CATEGORY_PRODUCTS,payload});
 export const singleProductAction = (payload) => ({ type: SINGLE_PRODUCT, payload });
+export const addCountProductAction = (payload) => ({ type: ADD_COUNT_PRODUCT, payload });
+
 export const filterAllAction = (payload) => ({ type: FILTER_ALL, payload });
 
 
