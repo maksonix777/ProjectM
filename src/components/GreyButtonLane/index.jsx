@@ -2,7 +2,7 @@ import React from 'react'
 import s from './GreyButtonLane.module.css'
 import LinkButton from '../../ui/Buttons/LinkButton'
 
-export default function GreyButtonLane({title, buttonText}) {
+export default function GreyButtonLane({title}) {
   return (
     <div >
           <div className={s.linkButtonContainer} >

@@ -24,3 +24,8 @@ position: relative;
     border-top: 1px solid rgb(139,139,139);
     z-index: -1;
 }
+@media(max-width:768px){
+  .greyLane{
+    display: none;
+  }
+}

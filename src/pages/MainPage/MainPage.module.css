@@ -76,6 +76,10 @@
             padding-bottom: 326px;
             height: 600px;
             }
+         .greybtnMainPage{
+          display: none;
+         }
+
             }
 
     @media (max-width:480px){
