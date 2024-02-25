@@ -2,7 +2,7 @@
    white-space: nowrap;
     width: 218px;
     height: 58px;
-    padding: 10px 20px;
+   
     /* margin-top: 40px; */
     
     font-size: 20px;
@@ -53,14 +53,16 @@ box-shadow: none;
 
 @media (max-width: 480px) {
     
-    
+  .checkout_btn{
+    margin-left: 40px;
+  }
     
 }
 
 
 @media (max-width: 360px){
     .wrapper {
-        margin: 0 auto;
+        margin: 0 20px;
         max-width: 360px;
     }
     

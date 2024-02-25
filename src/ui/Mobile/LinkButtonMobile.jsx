@@ -7,7 +7,7 @@ export default function LinkButtonMobile({buttonText,link }) {
   return (
     < >
         <Link to={link}>
-        <button className={s.linkButton}>{buttonText} </button>
+        <button className={s.linkButtonMobile}>{buttonText} </button>
        </Link>
             
     </>

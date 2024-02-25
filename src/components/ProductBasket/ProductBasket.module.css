@@ -158,11 +158,12 @@ color: black;
     gap: 32px;
 }
 .buttonGreyContainer{
-    margin-bottom: 40px;
-    margin-top: 80px;
     display: flex;
     align-items: center;
     max-width: 1400px;
+}
+.buttonGreyContainer h2{
+   margin-top: 40px;
 }
 .TotalAndPrice{
     display: flex;
@@ -253,7 +254,7 @@ color: black;
 }
 .greybtnMainPage{
   
-    margin-top: 40px;
+    margin-top: 20px;
 }
 @media (max-width:1440){
 
@@ -263,5 +264,45 @@ color: black;
         display: flex;
         gap: 20px;
         flex-direction: column;
+    }
+    .OrderDetails{
+        height: 100%;
+        width:100%;
+        background-color: rgba(241, 243, 244, 1);
+        display: flex;
+        flex-direction: column;
+        gap:24px ;
+        padding: 32px;
+        border-radius: 12px;
+    
+    }
+   
+}
+@media (max-width: 768px){
+    .controlAll{
+   flex-direction: column;
+        display: flex;
+       gap: 32px;
+    }
+    .productTxtAll{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px){
+    .control button{
+        width: 58px;
+        aspect-ratio: 1;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+    }.buttonGreyContainer{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        max-width: 1400px;
     }
 }

@@ -92,7 +92,10 @@ h3 {
         font-size: 48px;
         line-height: 110%;
     }
-  
+    .wrapper{
+        margin-right: 20px;
+        margin-left: 20px;
+        }
 }
 
 @media (max-width: 768px) {
@@ -111,15 +114,19 @@ h3 {
     h3{
         font-size: 36px;
     }
-
+   
 }
 
 
 
 @media (max-width: 480px) {
- .wrapper {
+ /* .wrapper {
      margin: 0 auto;
      max-width: 480px;
+ } */
+ .wrapper{
+ margin-right: 20px;
+ margin-left: 20px;
  }
 
  h1 {
@@ -129,7 +136,7 @@ h3 {
  }
 
  h2 {
-     font-size: 40px;
+     font-size: 48px;
      margin: 56px 0 24px;
 
     }

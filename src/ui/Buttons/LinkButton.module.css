@@ -1,5 +1,4 @@
 .linkButton{
-   
     white-space: nowrap;
     height: 36px;
     padding: 8px 16px;
@@ -11,7 +10,6 @@
     border: 1px solid  rgb(229, 229, 229);
     font-weight: 500;
     background-color: white;
-  
 }
 
 .linkButton:hover {
@@ -20,7 +18,7 @@
     background-color: #000000;
 }
 
- .laneButton{
+.laneButton{
     
         display: flex;
         justify-content: space-between;
@@ -33,18 +31,17 @@
             margin: 0 auto;
             max-width: 360px;
         }
-     
         .linkButton{
-       display: none;
+        display: none;
         }
-     }
-     
-     @media  screen and (max-width:1440px) and (min-height:360px) {
+        }
+    @media  screen and (max-width:1440px) and (min-height:360px) {
         .linkButton a{
             display:block;
-          
-          
-             }
-           
-    
+        }
+    }
+    @media (max-width:768px){
+        .linkButton{
+            display: none;
+        }
     }

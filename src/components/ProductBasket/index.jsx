@@ -75,7 +75,7 @@ function ProductBasket({ type }) {
     const modalTxt = ['Your order has been successfully placed on the website.',
      'A manager will contact you shortly to confirm your order.']
     return (
-        <div className="wrapper">
+        <div >
             <div className={s.buttonGreyContainer}>
                 <GreyButtonLane title="Shopping cart" />
                 <div className={s.greybtnMainPage}>

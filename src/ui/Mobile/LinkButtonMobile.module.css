@@ -1,4 +1,4 @@
-.linkButton{
+.linkButtonMobile{
    
     white-space: nowrap;
     height: 36px;
@@ -14,13 +14,13 @@
   
 }
 
-.linkButton:hover {
+.linkButtonMobile:hover {
     cursor: pointer;
     color: white;
     background-color: #000000;
 }
 
- .laneButton{
+ .linkButtonMobile{
         
         display: flex;
         justify-content: space-between;
@@ -30,7 +30,11 @@
     }
 
 
-
+@media (max-width:768px){
+    .linkButtonMobile{
+        display: none;
+    }
+}
 
     @media (max-width: 360px){
         .wrapper {
