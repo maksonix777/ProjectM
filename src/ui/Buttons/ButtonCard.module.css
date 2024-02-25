@@ -1,6 +1,6 @@
 .checkout_btn{
    white-space: nowrap;
-    width: 313px;
+    width: 218px;
     height: 58px;
     padding: 10px 20px;
     /* margin-top: 40px; */
@@ -16,6 +16,7 @@
     cursor: pointer; 
 }
 .checkout_btn:hover{
+    width: 218px;
     cursor: pointer;
     color: white;
     background-color: rgb(0, 0, 0);
