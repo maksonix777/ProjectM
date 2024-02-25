@@ -54,8 +54,8 @@ console.log(type + '1213242326525')
 
 
     return (
-        <div >
-            <div className={s.productsContainer}>
+        <div className='wrapper_All'>
+            <div className={s.productsContainer} >
               {/* {!products.length && <div className={s.noResult}> no result found </div>} */}
                 {products?.map((elem) => ( 
                   elem?.isShowFrom && elem?.isShowTo && elem?.isShowSale &&

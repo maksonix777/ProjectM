@@ -15,22 +15,18 @@ abbr{
    
     }
 
-.productTitle{
+/* .productTitle{
     
-    margin:20px 32px 16px;
+    margin:20px 32px 16px ;
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
-    }
+    } */
 
    
-.productsAllTitle{
-    font-size: 64px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-}
+
 .ProductCard{
     object-fit: cover;
 
@@ -119,4 +115,5 @@ abbr{
 }
 .productsAllTitle {
 margin-block: 40px;
+margin-left: 20px;
 }
