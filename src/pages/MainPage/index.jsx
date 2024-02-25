@@ -15,7 +15,7 @@ import subtract from "../../media/substract.png"
 export default function MainPage() {
 
 
-   
+
 
 
 
@@ -26,18 +26,18 @@ export default function MainPage() {
         saleRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
-    
-        const scrollToTop = () => {
-          window.scrollTo({
+
+    const scrollToTop = () => {
+        window.scrollTo({
             top: 100,
             behavior: 'smooth' // You can use 'auto' instead of 'smooth' for an instant scroll
-          });
-        };
-      
- return (
+        });
+    };
+
+    return (
         <div >
-            <div className={s.btn_top}onClick={scrollToTop}>
-            <span className={s.unicode}> &#8963;</span> 
+            <div className={s.btn_top} onClick={scrollToTop}>
+                <span className={s.unicode}> &#8963;</span>
             </div>
             <div className={s.banner}>
                 <div className={`${s.bannerTxt} wrapper_All `}>
@@ -49,10 +49,12 @@ export default function MainPage() {
             </div>
 
 
-            <div className={`${s.buttonGreyContainer} wrapper_All`}>
-                <GreyButtonLane title='Categories' />
-                <div className={s.greybtnMainPage}>
-                    <LinkButton buttonText='All Categories' link="categories/all" />
+            <div className="wrapper_All">
+                <div className={s.buttonGreyContainer}>
+                    <GreyButtonLane title='Categories' />
+                    <div className={s.greybtnMainPage}>
+                        <LinkButton buttonText='All Categories' link="categories/all" />
+                    </div>
                 </div>
 
             </div>
@@ -67,10 +69,12 @@ export default function MainPage() {
 
             <Coupon />
 
-            <div className={`${s.buttonGreyContainer} wrapper_All`} ref={saleRef}>
-                <GreyButtonLane title='Sale' />
-                <div className={s.greybtnMainPage}>
-                    <LinkButton buttonText='All Sales' link="/allSales" /></div>
+            <div className="wrapper_All">
+                <div className={`${s.buttonGreyContainer} wrapper_All`} ref={saleRef}>
+                    <GreyButtonLane title='Sale' />
+                    <div className={s.greybtnMainPage}>
+                        <LinkButton buttonText='All Sales' link="/allSales" /></div>
+                </div>
             </div>
             <CloseButton />
             <div className={s.buttonGrey}>

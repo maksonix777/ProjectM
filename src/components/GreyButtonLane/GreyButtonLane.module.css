@@ -10,11 +10,12 @@
    
 }
 .title{
+  
   background-color: white;
   white-space: nowrap;
   padding-right:32px ;
   color: rgb(40, 40, 40);
-position: relative;
+  position: relative;
  }
 .greyLane{
     margin-top: 40px;

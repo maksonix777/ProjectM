@@ -75,12 +75,9 @@ background-color: rgb(134, 14, 14);
     font-weight: 600;
     line-height: 110%; /* 44px */
 }
-/* ProductsPage.module.css */
 
-.ProductCard {
-   
-    /* Other styles for ProductCard */
-  }
+
+
   
   .discountPercentage {
     position: absolute;
@@ -88,7 +85,7 @@ background-color: rgb(134, 14, 14);
     right: 0;
     color: white;
     padding: 5px;
-    /* Other styles for discountPercentage */
+   
   }
   
 .greenDiscount{
