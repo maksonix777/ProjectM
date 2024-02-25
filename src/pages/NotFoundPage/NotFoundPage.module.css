@@ -21,10 +21,12 @@
     
 }
 
-.notFoundPage{
-   
+.notFoundPageContainer{
+   margin-top: 40px;
 }
-
+.text_404{
+    margin-bottom: 32px;
+}
 .notFoundPageContainer{
     display: flex;
     flex-direction: column;
@@ -45,5 +47,8 @@
     }
     .notFoundPage{
         max-width: 70%;
+}
+.text_404{
+    margin-bottom: 24px;
 }
 }

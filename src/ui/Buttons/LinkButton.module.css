@@ -1,5 +1,5 @@
 .linkButton{
-   margin-right: 20px;
+   
     white-space: nowrap;
     height: 36px;
     padding: 8px 16px;
@@ -10,7 +10,7 @@
     font-size: 16px;
     border: 1px solid  rgb(229, 229, 229);
     font-weight: 500;
-    
+    background-color: white;
   
 }
 
@@ -42,7 +42,9 @@
      @media  screen and (max-width:1440px) and (min-height:360px) {
         .linkButton a{
             display:block;
-             }
           
+          
+             }
+           
     
     }

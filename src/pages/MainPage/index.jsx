@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import s from "./MainPage.module.css";
 import checkOut from "../../media/checkOut.jpg";
 import Coupon from "../../components/Coupon";
@@ -10,20 +10,35 @@ import LinkButton from "../../ui/Buttons/LinkButton";
 import CloseButton from "../../components/CloseButton";
 import GreyButtonLane from "../../components/GreyButtonLane";
 import LinkButtonMobile from "../../ui/Mobile/LinkButtonMobile";
-
+import subtract from "../../media/substract.png"
 
 export default function MainPage() {
 
 
+   
+
+
+
     const saleRef = useRef();
+    const [isVisible, setIsVisible] = useState(false);
 
     const handleClick = () => {
         saleRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
-
-    return (
+    
+        const scrollToTop = () => {
+          window.scrollTo({
+            top: 100,
+            behavior: 'smooth' // You can use 'auto' instead of 'smooth' for an instant scroll
+          });
+        };
+      
+ return (
         <div >
+            <div className={s.btn_top}onClick={scrollToTop}>
+            <span className={s.unicode}> &#8963;</span> 
+            </div>
             <div className={s.banner}>
                 <div className={`${s.bannerTxt} wrapper_All `}>
                     <h1 className={s.bannerText}>Amazing Discounts on Garden Products!</h1>
@@ -32,6 +47,7 @@ export default function MainPage() {
                     </div>
                 </div>
             </div>
+
 
             <div className={`${s.buttonGreyContainer} wrapper_All`}>
                 <GreyButtonLane title='Categories' />

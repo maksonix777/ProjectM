@@ -1,6 +1,6 @@
 .checkout_btn{
    white-space: nowrap;
-    width: 218px;
+    width: 313px;
     height: 58px;
     padding: 10px 20px;
     /* margin-top: 40px; */
@@ -36,35 +36,32 @@ border: 1px solid var(--light-grey);
 outline: none; 
 box-shadow: none;
 }
+
+@media (max-width: 1000px){
+    
+    .BtnHome{
+        margin-bottom: 210px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    
+}
+
+@media (max-width: 480px) {
+    
+    
+    
+}
+
+
 @media (max-width: 360px){
     .wrapper {
         margin: 0 auto;
         max-width: 360px;
     }
- 
     
- }
- 
- @media (max-width: 480px) {
- 
-
-
- }
-
-@media (max-width: 768px) {
-
- 
+    
 }
-
-
- @media (max-width: 1000px){
- 
-    .BtnHome{
-        margin-bottom: 210px;
-    }
-
- }
-
- @media(max-width:1440px){
-
- }

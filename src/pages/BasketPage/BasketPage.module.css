@@ -1,4 +1,7 @@
+
+
 .buttonGreyContainer{
+    
     display: flex;
     align-items: center;
     margin-block: 40px;
@@ -22,8 +25,45 @@
     margin-block: 40px;
     
 }
-@media (max-width: 768px){
-.greybtnMainPage{
+.looksLike{
+    margin-bottom: 20px;
+}
+.greybtnMainPageMob{
     display: none;
 }
+@media (max-width: 1440px) {
+    
+}
+@media (max-width: 1000px) {
+  
+}
+@media (max-width: 768px){
+   
+}
+
+@media (max-width: 480px) {
+ .looksLike{
+    margin-left: 20px;
+    text-align: left;
+ }
+    .buttonGreyContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+      
+       
+    }
+    .greybtnMainPage{
+        display: none;
+    }
+    .greybtnMainPageMob{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-block: 40px;
+    }
+    
+    
+
 }

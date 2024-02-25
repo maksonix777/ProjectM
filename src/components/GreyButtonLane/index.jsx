@@ -4,7 +4,7 @@ import LinkButton from '../../ui/Buttons/LinkButton'
 
 export default function GreyButtonLane({title}) {
   return (
-    <div >
+    <div>
           <div className={s.linkButtonContainer} >
            
             <h2 className={s.title}>{title}</h2>

@@ -44,7 +44,7 @@ function ProductsContainer({ type }) {
 
 
   return (
-    <div className="wrapper">
+    <div className="wrapper_All">
 
       <h2 className={s.productsAllTitle}>{category_title}</h2>
       <FilterProducts type={type} />

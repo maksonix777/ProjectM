@@ -23,14 +23,14 @@ function CategoriesContainer({ type }) {
  }
 return (
     <div className="wrapper_All"> 
-    <div className={`${s.categoriesAll} wrapper`} >
+    <div className={`${s.categoriesAll} wrapper `} >
     
     
 
-        <div className={style}>
+        <div  className={style}>
             {allCategories.map(elem => 
-                <div>
-                    <Link key={elem.id} to={"/category/" + elem.id}>
+                <div key={elem.id}>
+                    <Link  to={"/category/" + elem.id}>
                     <img alt='categories' className={s.categoriesItem} src={ROOT_URL+elem.image}/>
                     <p className={s.categoriesName}>{elem.title}</p>
                     </Link>

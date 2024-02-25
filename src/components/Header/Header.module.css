@@ -22,9 +22,10 @@ header {
 }
 
 .navbar a:hover {
+    color: var(--green);
     text-decoration: underline;
     text-underline-offset: 8px;
-    color: inherit;
+    
 }
 .log{
     width: 70px;

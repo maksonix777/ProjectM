@@ -14,24 +14,31 @@ export default function BasketPage() {
 
   return (
     <div className="wrapper">
-      <div className="wrapper_Small">
+      <div className="wrapper_All">
         {item.length ? <ProductBasket /> :
 
-          (<div>
+          (<div className='wrapper shopping_wrapper'>
             <div className={s.buttonGreyContainer}>
               <GreyButtonLane title="Shopping cart" />
-              
+
               <div className={s.greybtnMainPage}>
                 <LinkButton buttonText="Back to the store" link="/products/all" />
+
               </div>
             </div>
-            <Link to={'/products/all'}><ButtonCard title="continue shopping" /></Link>
+            <p className={s.looksLike}>
+              Looks like you have no items
+              in your basket currently.</p>
+            <Link to={'/products/all'}><ButtonCard title="Continue Shopping" /></Link>
 
-            <p className={s.looksLike}>Looks like you have no items in your basket currently.</p>
+            <div className={s.greybtnMainPageMob}>
+            <LinkButton buttonText="Back to the store" link="/products/all" />
+            </div>
+            
           </div>)}
 
 
-          
+
       </div>
     </div>
   )

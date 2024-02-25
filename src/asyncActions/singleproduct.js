@@ -3,7 +3,7 @@ import { ROOT_URL } from "../index";
 import { singleProductAction } from "../store/reducers/ProductsReducer";
 
 
-export function fetchProductById(id){
+export function fetchProductById(id){ 
     console.log((ROOT_URL + '/products/' + id));
     return function(dispatch){
         fetch(ROOT_URL + '/products/' + id)

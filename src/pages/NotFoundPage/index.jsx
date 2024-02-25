@@ -6,7 +6,7 @@ import ButtonCard from "../../ui/Buttons/ButtonCard";
 
 export default function NotFoundPage() {
   return (
-    <div className={s.notFoundPageContainer}> NotFoundPage
+    <div className={s.notFoundPageContainer}> 
       <div className={s.notFoundContainer}> 
       <img className={s.notFoundPage} src={notFoundPage} alt="PageNotFoundImage"/>
       </div>
@@ -14,7 +14,7 @@ export default function NotFoundPage() {
       <h2>Page Not Found</h2>
 
       <p>We’re sorry, the page you requested could not be found. </p>
-      <p> Please go back to the homepage.</p>
+      <p className={s.text_404}> Please go back to the homepage.</p>
 
       <Link to="/">
         <ButtonCard title="Go Home" widthBtn="209" />
