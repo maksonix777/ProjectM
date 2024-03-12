@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 import { ROOT_URL } from '../../index';
 import { fetchAllProducts } from '../../asyncActions/products';
 import s from './ProductBasket.module.css';
-import ButtonCard from '../../ui/Buttons/ButtonCard';
+
 import InputCoupon from '../../ui/InputCoupon';
 import LinkButton from '../../ui/Buttons/LinkButton';
+
 import {
     addItemAction,
     cleanItemAction,
@@ -77,9 +78,13 @@ function ProductBasket({ type }) {
     return (
         <div >
             <div className={s.buttonGreyContainer}>
+                
                 <GreyButtonLane title="Shopping cart"/>
-                <div className={s.greybtnMainPage}>
-                <LinkButton buttonText="Back to the store" link="/products/all" />
+                <div className={s.revButton}>
+                   
+                    <div className={s.greybtnMainPage}>
+                    <LinkButton buttonText="Back to the store" link="/products/all" />
+                </div>
                 </div>
             </div>
 

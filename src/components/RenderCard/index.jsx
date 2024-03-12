@@ -59,8 +59,8 @@ console.log(type + '1213242326525')
               {/* {!products.length && <div className={s.noResult}> no result found </div>} */}
                 {products?.map((elem) => ( 
                   elem?.isShowFrom && elem?.isShowTo && elem?.isShowSale &&
-                    <Link to={"/product/" + elem.id}>
-                        <div className={s.ProductCard} key={elem.id}>
+                    <Link to={"/product/" + elem.id} key={elem.id}>
+                        <div className={s.ProductCard} >
                             {elem.discont_price && (<div className={s.greenDiscount}><p className={s.txtDiscount}>{saleHandle(elem)}</p></div>)}
 
                             <div className={s.imgBtnContainer}>

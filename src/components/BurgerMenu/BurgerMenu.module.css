@@ -70,10 +70,10 @@
 }
 
  .closeBtn::before {
-    content: '\2715'; /* Unicode for MULTIPLICATION X */
+    content: '\2715'; 
     font-size: 34px;
     display: inline-block;
-    /* Adjust spacing as needed */
+   
 }
 
  .closeBtn {

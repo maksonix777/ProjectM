@@ -29,7 +29,9 @@ export default function BasketPage() {
             <p className={s.looksLike}>
               Looks like you have no items
               in your basket currently.</p>
-            <Link to={'/products/all'}><ButtonCard title="Continue Shopping" /></Link>
+            <Link to={'/products/all'}>
+              <ButtonCard  title="Continue Shopping" />
+            </Link>
 
             <div className={s.greybtnMainPageMob}>
             <LinkButton buttonText="Back to the store" link="/products/all" />

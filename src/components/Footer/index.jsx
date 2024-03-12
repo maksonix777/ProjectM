@@ -60,8 +60,13 @@ export default function Footer() {
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src="https://maps.google.com/maps?width=1440&amp;height=350&amp;hl=en&amp;q=Starta%20Institute%20by%20Tel-Ran+(Starta%20Institute%20by%20Tel-Ran)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=1360&amp;height=350&amp;hl=en&amp;q=Tell-Ran.de%20Linkstra%C3%9Fe%C2%A02,%208%C2%A0OG,%20%20Deutschland%20Berlin+(Starta%20Institute)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
+
+            <script
+          type="text/javascript"
+          src="https://embedmaps.com/google-maps-authorization/script.js?id=5cc8523dabbd9cad7907fe9282ccd44115cfcb21"
+        ></script>
             <p className={s.name}>Maria Kozlova Project</p>
           </div>
       </footer>

@@ -54,6 +54,7 @@
 }
 .discount_form input {
     padding-left: 20px;
+    width: 100%;
 }
 /* .couponBtn:hover {
     background: var(--light-grey);
@@ -75,6 +76,17 @@
     border-radius: 12px;
     color: var(--green);
 } 
+label{
+    width: 100%;
+    position: relative;
+}
+.error__message{
+    position: absolute;
+    top: 80%;
+    color: red;
+    left: 0;
+    font-size: 12px;
+}
 @media (max-width: 768px) {
     .discount_form{
       margin-left: 20px;

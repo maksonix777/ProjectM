@@ -4,13 +4,12 @@ import basketImg from '../../media/basket.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const Basket = ({ basketItems, removeFromBasket }) => {
+const Basket = () => {
   // Calculate the total number of items in the basket
-  const products= useSelector(store => store.basket)
+  const products = useSelector(store => store.basket)
   const totalItems =  products.reduce((acc, item) => acc + item.count, 0) ;
 
-  console.log(totalItems);
-  console.log(products);
+ 
 return (
     <div className={s.basketItem}>
       <div className={s.basketGrey}alt="logo">
