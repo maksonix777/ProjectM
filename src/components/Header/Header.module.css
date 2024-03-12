@@ -27,9 +27,24 @@ header {
     text-underline-offset: 8px;
     
 }
-.log{
+.logo{
+    border-radius: 95px;
+    position: relative;
+ 
     width: 70px;
     height: 70px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.logo a img{
+    position: absolute;
+   
+    width: 73px;
+    height: 73px;
+}
+.logo:hover {
+    filter: brightness(1.2);
+    transform: scale(1);
+    box-shadow: 2px 2px 4px gray;
 }
 .line{
     top:128px;

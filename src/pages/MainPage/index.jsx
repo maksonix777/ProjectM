@@ -27,7 +27,7 @@ export default function MainPage() {
     };
 
 
-    const scrollToTop = () => {
+    function scrollToTop() {
         window.scrollTo({
             top: 100,
             behavior: 'smooth' // You can use 'auto' instead of 'smooth' for an instant scroll

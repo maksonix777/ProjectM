@@ -30,7 +30,9 @@
   margin-top:0px;
 }
 @media(max-width:1000px){
-  
+  .greyLane{
+    display: none;
+  }
 }
 @media(max-width:768px){
   .greyLane{

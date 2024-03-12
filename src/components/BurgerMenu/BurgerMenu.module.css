@@ -107,6 +107,17 @@
         cursor: pointer;
         display: block;
     }
+    .openNavBar a{
+        font-size: 24px;
+        margin-bottom: 36px;
+        margin-right: 20px;
+        margin-left: 32px;
+        display: block;
+        display: flex;flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        
+    }
 }
 
 
@@ -123,6 +134,7 @@
         color: inherit;
         
     }
+   
 }
 
 

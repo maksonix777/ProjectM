@@ -23,7 +23,7 @@ export default function BurgerMenu() {
                             <button className={s.closeBtn} onClick={() => setOpenMenu(!openMenu)}>
                             </button>
                             </div>
-                        <Link  to={'/'}> Main Page </Link>
+                        <Link onClick={() => setOpenMenu(!openMenu)} to={'/'}> Main Page </Link>
                         <Link onClick={() => setOpenMenu(!openMenu)} to={'/categories/all'}> Categories </Link>
                         <Link onClick={() => setOpenMenu(!openMenu)} to={'/products/all'}> All products </Link>
                         <Link onClick={() => setOpenMenu(!openMenu)} to={'/allSales'}> All sales </Link>

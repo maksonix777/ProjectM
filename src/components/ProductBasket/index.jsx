@@ -77,7 +77,7 @@ function ProductBasket({ type }) {
     return (
         <div >
             <div className={s.buttonGreyContainer}>
-                <GreyButtonLane title="Shopping cart" />
+                <GreyButtonLane title="Shopping cart"/>
                 <div className={s.greybtnMainPage}>
                 <LinkButton buttonText="Back to the store" link="/products/all" />
                 </div>
