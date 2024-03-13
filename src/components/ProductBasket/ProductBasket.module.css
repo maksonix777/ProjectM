@@ -266,6 +266,13 @@ color: black;
     
     margin-top: 40px;
 }
+.mobileBtnStore{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+}
+
 @media (max-width:1440){
     .controlAll{
         display: block;

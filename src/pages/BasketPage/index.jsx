@@ -6,6 +6,7 @@ import s from './BasketPage.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import GreyButtonLane from '../../components/GreyButtonLane'
 import LinkButton from '../../ui/Buttons/LinkButton'
+import LinkButtonMobile from '../../ui/Mobile/LinkButtonMobile'
 
 export default function BasketPage() {
   const dispatch = useDispatch()
@@ -14,12 +15,15 @@ export default function BasketPage() {
 
   return (
     <div className="wrapper">
+      
+      
       <div className="wrapper_All">
         {item.length ? <ProductBasket /> :
 
           (<div className='wrapper shopping_wrapper'>
             <div className={s.buttonGreyContainer}>
               <GreyButtonLane title="Shopping cart" />
+
 
               <div className={s.greybtnMainPage}>
                 <LinkButton buttonText="Back to the store" link="/products/all" />
@@ -32,16 +36,14 @@ export default function BasketPage() {
             <Link to={'/products/all'}>
               <ButtonCard  title="Continue Shopping" />
             </Link>
-
+            
             <div className={s.greybtnMainPageMob}>
             <LinkButton buttonText="Back to the store" link="/products/all" />
             </div>
-            
-          </div>)}
-
-
-
-      </div>
+          </div>
+          )}
+    </div>
+    
     </div>
   )
 }

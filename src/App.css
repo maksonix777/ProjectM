@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+a {
+    text-decoration: none;
+}
 .wrapper_All{
     margin: 0 auto;
     max-width: 1440px;

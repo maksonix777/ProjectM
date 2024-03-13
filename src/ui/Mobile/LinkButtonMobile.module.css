@@ -1,15 +1,16 @@
-.linkButtonMobile{
-   
+.linkButtonMobile  {
+    display: none;
     white-space: nowrap;
     height: 36px;
     padding: 8px 16px;
-    color:  #8B8B8B;
+    color: #8B8B8B;
     border-radius: 6px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    border: 1px solid  rgb(229, 229, 229);
+    border: 1px solid rgb(229, 229, 229);
     font-weight: 500;
+    background-color: white;
     
   
 }
@@ -20,19 +21,19 @@
     background-color: #000000;
 }
 
- .linkButtonMobile{
+ /* .linkButtonMobile{
         
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0px;
+        padding: 10px 20px;
         
-    }
+    } */
 
 
 @media (max-width:768px){
     .linkButtonMobile{
-        display: none;
+        display: block;
     }
 }
 
@@ -41,7 +42,9 @@
             margin: 0 auto;
             max-width: 360px;
         }
-     
+        .linkButtonMobile{
+            display: none;
+        }
         
      }
      

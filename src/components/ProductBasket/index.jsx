@@ -15,6 +15,7 @@ import {
 } from '../../store/reducers/basketReducer';
 import GreyButtonLane from '../GreyButtonLane';
 import Modal from '../Modal';
+import LinkButtonMobile from '../../ui/Mobile/LinkButtonMobile';
  
 
 function CounterShop({ elem }) {
@@ -143,6 +144,10 @@ function ProductBasket({ type }) {
                 </div>
             </div>   
 
+            <div className={s.mobileBtnStore}>
+            <LinkButtonMobile buttonText="Back to the store" link="/products/all"/>  
+            </div>
+            
             {isModalVisible && (
                 <Modal modalTxt={modalTxt} onClose={() => { setModalVisible(false);dispatch(cleanItemAction()) } }>
                     <div className={s.modalTxt}>
@@ -151,6 +156,7 @@ function ProductBasket({ type }) {
                         <p>A manager will contact you shortly to confirm your order.</p>
                     </div>
                 </Modal>
+                
             )}
         </div>
     );
