@@ -9,8 +9,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 
  export const ROOT_URL = 'https://telran-backend.onrender.com'
-export const ROOT_URL = 'http://localhost:3333'
-// export const ROOT_URL = "https://backend-s3ji.onrender.com";
+// export const ROOT_URL = 'http://localhost:3333'
+export const ROOT_URL = "https://backend-s3ji.onrender.com";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
